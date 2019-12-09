@@ -21,10 +21,12 @@ body {
         color: $blackText;
         overflow-y: scroll;
         position: relative;
-        overscroll-behavior: contain;
+        // overscroll-behavior: contain;
+        overflow-y: scroll;
+        display: table;
 
         .topimage {
-            background-image: url("..//cumber_images/breakthrough-400x400.jpg");
+            background-image: url("..//covers-images-final/BELIEVE_320x320.jpg");
             width: 100%;
             height: 320px;
             background-repeat:no-repeat;
@@ -36,7 +38,10 @@ body {
             background-color: #181818;
             text-align: center;
             width: 100%;
-            position: relative;
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            z-index: 4;
         }
         .header:after {
             content: "";
@@ -76,6 +81,8 @@ body {
         ul {
             width: 100%;
             height: auto;
+            // position: relative;
+            // z-index: 1;
         }
         li.music-service-list-item {
             display: flex;
