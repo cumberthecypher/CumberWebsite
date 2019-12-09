@@ -309,8 +309,8 @@
          var playPromiseVideo = document.querySelector('video').play();
             // In browsers that don’t yet support this functionality,
                 // playPromise won’t be defined.
-                if (playPromise !== undefined) {
-                playPromise.then(function() {
+                if (playPromiseVideo !== undefined) {
+                playPromiseVideo.then(function() {
                     // Automatic playback started!
                 }).catch(function(error) {
                     // Automatic playback failed.
@@ -319,14 +319,15 @@
             }
 
 
-        var v = document.getElementById("video1");
-        var vt = document.getElementById("video2");
+        // var v = document.getElementById("video1");
+        // var vt = document.getElementById("video2");
 
         // var a = document.getElementsByTagName("audio")[0];
 
 
         var a = playPromise[0];
         var v = playPromiseVideo;
+
         a.addEventListener("playing", function () { a.play(); }, true);
         v.addEventListener("playing", function () { a.pause(); }, true);
         // vt.addEventListener("playing", function () { a.pause(); }, true);
