@@ -1,0 +1,629 @@
+//importing media query responsive min
+@import "cumber-masterstyle";
+
+//importing base styles
+@import "cumber_base_styles";
+
+.main_wrapper { 
+	display: block;
+	// background-color: $white;
+	background-color: #333;
+	font-family: 'Open Sans', sans-serif;
+	width: 100%; 
+	margin: 0 auto;
+	color: $blackText;
+	overflow-y: scroll;
+	height: 100vh;
+	position: relative;
+  	overscroll-behavior: contain;
+}
+.header-top-nav { 
+	display: block;
+	width: 100%;
+	position: -webkit-sticky;
+	position: sticky; //this makes the top nav stay as i scroll... not sure i want this??
+	top: 0;
+	background: rgba(0,0,0,0.7);
+	z-index: 99;
+	height: 4.0rem;
+
+		@include responsivemin($iPad_iPadMini-Port, $height){
+			height: 6.0rem;
+		}
+		@include responsivemin($iPad_iPadMini-Land-Desktop, $height){
+			display: -webkit-box;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+		}
+
+		.logo-box {
+			display: none;
+			background:url("..//cumber_images/Cumber-THA-CYPHER-Logo-white-BLOCKtext.png");
+			background-repeat:no-repeat;
+			background-position: center;
+			background-size: contain;
+			width: 30%;
+			height:4.0rem;
+			margin:1.0rem auto 0;
+	
+			@include responsivemin($iPad_iPadMini-Port, $height){
+				width:40%;
+				display:inline-block;
+				vertical-align:top;
+				height:6.0rem;
+				background-size: 50%;
+				background-position: 2rem;
+				margin: 0 auto;
+			}
+			@include responsivemin($iPhoneXland_or_KindlePort, $height){
+				display:none;
+			}
+			@include responsivemin($iPad_iPadMini-Land-Desktop, $height){
+				display: inline-block;
+				width: 50%;
+				background-size: 30%;
+			}
+			@include responsivemin($laptopTouch_1280, $height){
+				display:inline-block;
+				vertical-align:top;
+				background-size: 20%;
+			}
+		}
+		.nav-sec {
+			text-align:center;
+			display:block;
+			height: 4.0rem;
+		
+			@include responsivemin($iPad_iPadMini-Port, $height){
+				width:59%;
+				display:inline-block;
+				vertical-align:top;
+				height: 6.0rem;
+				text-align:right;
+			}
+			@include responsivemin($iPhoneXland_or_KindlePort, $height){
+				width:100%;
+			}
+			@include responsivemin($iPad_iPadMini-Land-Desktop, $height){
+				display: inline-block;
+				width: 50%;
+			}
+		
+			ul {
+				display: -webkit-box;
+				display: -moz-box;
+				display: -ms-flexbox;
+				display: -webkit-flex;
+				display: flex;
+				justify-content: space-around;
+			}
+
+			a {
+				height: 4.0rem;
+				display: table;
+		
+				@include responsivemin($iPad_iPadMini-Port, $height){
+					height: 6.0rem;
+				}
+			}
+		
+			a li {
+				color: $white;
+				display:table-cell;
+				vertical-align: middle;
+				font-size: 1.6rem;
+				cursor:pointer;
+		
+				&:hover {
+					color: rgba(0,244,255,0.7)!important;
+				}
+				&:active, &:focus {
+					color: #00aab2;
+				}
+				@include responsivemin($GalaxySIII, $height){
+					font-size: 1.8rem;
+					margin: 0px 5px;
+				}
+				@include responsivemin($iPad_iPadMini-Port, $height){
+					font-size: 2.0rem;
+				}
+			}
+		}
+		//end of TOP NAV SECTION
+}
+
+.section-header {
+	position: relative;
+    display: block;
+	width: 100%;
+	height: 4.0rem;
+	text-align: center;
+	background: rgba(0,129,142,1);
+	z-index: 3;
+
+	@include responsivemin($iPad_iPadMini-Port, $height){
+		height: 6.0rem;
+	}
+
+	.spacer {
+		height: 4.0rem;
+		display:inline-block;
+		vertical-align: middle;
+
+		@include responsivemin($iPad_iPadMini-Port, $height){
+			height: 6.0rem;
+		}
+	}
+
+	h2 {
+		color: #ffffff;
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+.section-content {
+	padding: 2.0rem;
+	background-color: #222222;
+
+	@include responsivemin($iPad_iPadMini-Port, $height){
+		padding: 4.0rem;
+	}
+	@include responsivemin($Nexus7_land_960w, $height){
+		padding: 6.0rem;
+	}
+}
+
+.home-top-image-section {
+	display:table;
+	position:relative;
+	height: 100vh;
+	width: 100%;
+	background-image: url("..//cumber_images/cumberBlueJacket-final.jpg");
+	background-repeat:no-repeat;
+	background-size: cover;
+	background-position-x: 58%;
+	background-position-y: top;
+    padding: 0;
+	margin: 0;
+	margin: -4rem 0;
+
+	@include responsivemin($iPad_iPadMini-Port, $height){
+		margin: -6rem 0;
+	}
+	@include responsivemin($iPad_iPadMini-Land-Desktop, $height){
+		background-size: cover;
+		background-position-x: 50%;
+	}
+
+	img { //Big Cumber the Cypher logo here
+		width: 92%;
+		position: absolute;
+  		left: 50%;
+  		top: 77%;
+		transform: translate(-50%, -50%);
+
+		@include responsivemin($iPhone-4-Land, $height){
+			width: 35%;
+			transform: none;
+    		left: auto;
+    		right: 3%;
+    		top: 60%;
+		}
+		@include responsivemin($iPhone-5-Land, $height){
+			right: 2%;
+		}
+		@include responsivemin($iPad_iPadMini-Port, $height){
+			width: 45%;
+		}
+		@include responsivemin($iPad_iPadMini-Land-Desktop, $height){
+			width: 35%;
+		}
+	}
+}
+
+.music-section {
+	margin-top: -4rem;
+	background-image: linear-gradient(to bottom, rgba(2, 2, 2, 0.3), rgba(0,0,0,0.7)),url(..//cumber_images/cumberBlueJacket1-rev-orig2.jpg);
+	// background-image: url(..//cumber_images/cumberBlueJacket1-rev-orig2.jpg);
+    background-repeat: no-repeat;
+	background-size: cover;
+	background-position-x: center;
+    background-position-y: top;
+
+	@include responsivemin($iPad_iPadMini-Port, $height){
+		margin-top: -6rem;
+	}
+	.section-header {
+		background: rgba(0,129,142,0.5);
+	}
+	.section-content.music-content {
+		width: 100%;
+		display: block;
+		background-color: transparent;
+		padding: 0rem;
+	}
+}
+
+.gallery-section {
+	text-align: center;
+	width: 100%;
+	display: block;
+	
+	.gallery-content {
+		width: 100%;
+		display: block;
+		background: #111;
+		padding: 4.0rem 2.0rem;
+
+		@include responsivemin($iPad_iPadMini-Port, $height){
+			padding: 4.0rem;
+		}
+		@include responsivemin($laptopTouch_1280, $height){
+			padding: 6.0rem;
+		}
+		@include responsivemin($Wide-Desktop, $height){
+			padding: 8.0rem;
+		}
+		@include responsivemin($ExtraLarge-Desktop, $height){
+			padding: 10.0rem;
+		}
+
+		.video-responsive{
+			overflow:hidden;
+			position:relative;
+			height: auto;
+		}
+		.video-responsive video {
+			height: auto;
+			width:100%;
+			display: block;
+		}
+		.video-responsive video source {
+			width: 100%;
+			height: auto;
+		}
+		.video-wrapper1, .video-wrapper2 {
+			position: relative;
+			text-align: center;
+			margin-bottom: 4rem;
+			max-width: 100%;
+			background-color: #000;
+			overflow: hidden;
+		}
+		.video-wrapper1 {
+			height: 100%;
+		}
+		.video-wrapper2 {
+			height: 100%;
+			position: relative;
+			text-align: center;
+			margin-bottom: 4rem;
+			width: 100%;
+			display: block;
+		}
+
+		h2 {
+			color: #fff;
+			font-size: 1.4rem;
+			line-height: 1.4;
+
+			@include responsivemin($iPhone-6-8-Port, $height){
+				font-size: 1.6rem;
+				line-height: 1.5;
+			}
+			@include responsivemin($Nexus7-Port, $height){
+				font-size: 1.8rem;
+				line-height: 2;
+			}
+			@include responsivemin($iPad_iPadMini-Port, $height){
+				font-size: 2rem;
+				line-height: 2.5;
+			}
+			@include responsivemin($laptopTouch_1280, $height){
+				font-size: 2.2rem;
+				line-height: 3.2;
+			}
+			@include responsivemin($Wide-Desktop, $height){
+				font-size: 2.4rem;
+				line-height: 3.4;
+			}
+		}
+
+		.photo-gallery-row {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 4rem;
+
+			@include responsivemin($Nexus7-Port, $height){ 
+				margin-bottom: 4rem;
+			}
+		}
+		.photo-gallery-row:last-child {
+			margin-bottom: 0rem;
+		}
+
+		.gallery-img {
+			width: 100px;
+			height: 100px;
+			display: inline-block;
+			color: white;
+			padding: 0 0 1.5rem;
+			text-align: center;
+			overflow: hidden;
+			border: 1px solid #000;
+
+			@include responsivemin($Nexus7-Port, $height){ 
+				width: 160px;
+				height: 160px;
+			}
+			@include responsivemin($iPhone-6-8-Land, $height){ 
+				width: 220px;
+				height: 220px;
+			}
+			@include responsivemin($iPad_iPadMini-Port, $height){
+				width: 200px;
+				height: 200px;
+			}
+			@include responsivemin($Nexus7_land_960w, $height){ 
+				width: 250px;
+				height: 250px;
+			}
+			@include responsivemin($iPad_iPadMini-Land-Desktop, $height){ 
+				width: 290px;
+				height: 290px;
+			}
+			@include responsivemin($laptopTouch_1280, $height){
+				width: 370px;
+				height: 370px;
+			}
+			@include responsivemin($Wide-Desktop, $height){
+				width: 410px;
+				height: 410px;
+			}
+			@include responsivemin($ExtraLarge-Desktop, $height){
+				width: 500px;
+				height: 500px;
+			}
+
+			img {
+				max-width: 100%;
+				height: auto;
+				width: auto;
+			}
+		}
+	}
+}
+
+
+.about-section {
+	position: relative;
+
+	.section-content.about-content-image { 
+		position: relative;
+		display: block;
+		height: 90rem;
+		width: 100%;
+		background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), 
+						url("..//cumber_images/cumberBlueJacket-bio-final.jpg");
+		background-repeat:no-repeat;
+		background-size: cover;
+		padding: 0;
+
+		@include responsivemin($Nexus7_land_960w, $height){
+			background-image:none;
+			background-position-x: right;
+			background-position-y: top;
+			vertical-align: top;
+		}
+		@include responsivemin($Wide-Desktop, $height){
+			height: 118rem;
+		}
+		@include responsivemin($ExtraLarge-Desktop, $height){
+			height: 120rem;
+
+		}
+	}
+
+	.about-bio-text {
+		position: absolute;
+		bottom: 0rem;
+		padding: 3rem 2rem;
+
+		@include responsivemin($iPad_iPadMini-Port, $height){
+			bottom: 0rem;
+			padding: 4rem;
+		}
+		@include responsivemin($Nexus7_land_960w, $height){
+			position: relative;
+			background-image:none;
+			background: #000;
+			width: 50%;
+			height: 100%;
+			display: inline-block;
+			top: 0rem;
+			bottom: initial;
+			z-index: 2;
+		}
+		@include responsivemin($iPad_iPadMini-Land-Desktop, $height){
+			padding: 5rem;
+		}
+		@include responsivemin($Wide-Desktop, $height){
+			padding: 5rem;
+		}
+		@include responsivemin($ExtraLarge-Desktop, $height){
+			padding: 11rem 9rem;
+		}
+
+		p {
+			text-indent: 2rem;
+			color: #ffffff;
+			font-weight: 100;
+			font-size: 1.3rem;
+			line-height: 1.4;
+			padding-bottom: 0.5rem;
+	
+			@include responsivemin($iPhone-6-8-Port, $height){
+				font-size: 1.4rem;
+			}
+			@include responsivemin($iPad_iPadMini-Port, $height){
+				font-size: 1.6rem;
+				line-height: 1.6;
+			}
+			@include responsivemin($laptopTouch_1280, $height){
+				font-size: 1.7rem;
+				line-height: 1.75;
+			}
+			@include responsivemin($Wide-Desktop, $height){
+				font-size: 2.0rem;
+				line-height: 1.9;
+				padding-bottom: 1.2rem;
+			}
+		}
+	}
+	
+	.bio-image-wide {
+		display: none;
+
+		@include responsivemin($Nexus7_land_960w, $height){
+			display: inline-block;
+			width: 50%;
+			background-image: linear-gradient(to left, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1)), url("..//cumber_images/cumberBlueJacket-bio-final.jpg");
+			background-position-x: 0;
+			background-repeat: no-repeat;
+			background-size: cover;
+			position: absolute;
+			right: 0;
+			top: 0rem;
+			height: 100%;
+		}
+	}
+}
+
+.contact-section {
+	text-align: center;
+	
+	.section-content {
+		background: #000;
+	}
+
+	.social-media {
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+	.each-icon {
+		display:inline-block;
+		vertical-align: top;
+		padding: 2.0rem;
+	
+		i {
+			color:#FFFFFF;
+			font-size: 2.5rem;
+
+			@include responsivemin($iPad_iPadMini-Port, $height){
+				font-size: 4rem;
+			}
+			
+			&:hover {
+				color: rgba(0,244,255,0.7)!important;
+			}
+			&:focus, &:active {
+				color: #00aab2;
+			}
+		}
+	}
+}
+
+footer {
+	display: table;
+	width: 100%;
+	text-align: center;
+	padding: 2rem 0;
+
+	@include responsivemin($iPad_iPadMini-Port, $height){
+		padding: 3rem 4rem 4rem;
+	}
+
+	img {
+		width: 70%;
+		margin: 0 auto;
+		padding: 2.0rem 0 0rem;
+
+		@include responsivemin($GalaxySIII, $height){
+			width: 60%;
+		}
+		@include responsivemin($iPhone-4-Land, $height){
+			width: 35%;
+		}
+		@include responsivemin($iPad_iPadMini-Port, $height){
+			width: 35%;
+		}
+		@include responsivemin($Nexus7_land_960w, $height) {
+			width: 30%;
+		}
+		@include responsivemin($iPad_iPadMini-Land-Desktop, $height) {
+			width: 25%;
+		}
+		@include responsivemin($laptopTouch_1280, $height) {
+			width: 15%;
+		}
+	}
+
+	p, a {
+		font-size: 1.2rem;
+		color: #FFFFFF;
+		line-height: 2;
+
+		@include responsivemin($GalaxySIII, $height){
+			font-size: 1.3rem;
+		}
+		@include responsivemin($iPhoneXland_or_KindlePort, $height) {
+			font-size: 1.3rem;
+		}	
+		@include responsivemin($iPad_iPadMini-Port, $height){
+			font-size: 1.8rem;
+		}
+	}
+	a:hover {
+		color: rgba(0,244,255,0.7) !important;
+	}
+
+	.email-height a {
+		line-height: 3;
+		font-size: 1.6rem;
+
+		@include responsivemin($iPhoneXland_or_KindlePort, $height) {
+			font-size: 2.0rem;
+		}	
+		@include responsivemin($iPad_iPadMini-Port, $height){
+			font-size: 2.2rem;
+		}
+
+		&:hover {
+			color: rgba(0,244,255,0.7)!important;
+
+		}
+	}
+}
+
+
+
+// VIMEO STYLES FOR video go here
+// iframe .vp-center .vp-controls-wrapper .vp-title header.vp-title-header .headers .sub-title .byline-from {
+// 	display: none !important;
+// }
+
+// #player .vp-title .vp-title-header h2 {
+// 	display: none !important;
+// }
+
+// iframe #player .vp-controls-wrapper {
+// 	display: none !important;
+// }

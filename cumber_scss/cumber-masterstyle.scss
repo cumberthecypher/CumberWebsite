@@ -1,0 +1,15 @@
+$xp-ie: false !default;
+
+@mixin responsivemin($width, $height) {
+
+	@if ($xp-ie == true){
+		@if $xp-ie-width >= $width {
+			@content;
+		}
+	}
+	@else {
+		@media all and (min-width: $width) and (min-height: $height) {
+			@content;
+		}
+	}
+}

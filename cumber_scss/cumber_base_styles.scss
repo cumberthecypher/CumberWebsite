@@ -1,0 +1,101 @@
+//importing media query responsive min
+@import "cumber-masterstyle";
+
+// colors
+$black: 000;
+$blackText: #222;
+$white: #fff;
+$red: #af272f;
+$blue: #282832;
+$yellow: #ffff00; 
+
+$height: 0.00em;
+$GalaxySIII: 22.50em; //360px
+$iPhone-6-8-Port: 23.000em;  //23.438em 375px
+$iPhone-6-8-PlusPort: 25.750em;  //414px really 412 = 25.750en
+$iPhone-4-Land: 28.000em;  //30em 480px
+$iPhone-5-Land: 35.500em;  //568px
+$Nexus7-Port: 37.500em; //600px
+$GalaxyNmore-Land: 40.000em;  //640px
+$iPhone-6-8-Land: 41.6875em;  //667px wide
+
+$iPad_iPadMini-Port: 48.000em; //768px
+$iPhoneXland_or_KindlePort: 50.000em; //800px or 812px iPhoneX
+$Nexus7_land_960w: 60.00em; //960px wide
+$iPad_iPadMini-Land-Desktop: 64.000em; //1024px
+$laptopTouch_1280: 80.000em; //1280px
+$Wide-Desktop: 90em; //1440px
+$ExtraLarge-Desktop: 100em; //1600px
+
+@media screen and (min-width: 1400px) {
+	.container {
+	  width: 1370px;
+	}
+  }
+  @media screen and (min-width: 1600px) {
+	.container {
+	  width: 1570px;
+	}
+  }
+  @media screen and (min-width: 1900px) {
+	.container {
+	  width: 1870px;
+	}
+  }
+
+ html {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	overflow-y: scroll;
+ } 
+body, html {
+	font-size: 10px;
+	scroll-behavior: smooth;
+}
+body, ul, h1, h2, h3, h4, h5, p, div, img, li {
+	margin: 0;
+    padding: 0;
+	box-sizing: border-box; 
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+a {
+	margin: 0;
+    padding: 0;
+    font-size: 1.6rem;
+}
+a:visited {
+	color: #FFFFFF;
+}
+a:hover{
+	text-decoration: none;
+}
+a:focus, a:active {
+	color: #00aab2;
+}
+
+p, h1, h2, h3, h4, h5 {
+	color: $blackText;
+}
+h1{
+	font-size: 2.8rem;
+	color: transparent;
+}
+h2 {
+	font-size: 2.0rem;
+	font-weight: 600;
+
+	@include responsivemin($iPad_iPadMini-Port, $height){
+		font-size: 2.4rem;
+	}
+	@include responsivemin($iPad_iPadMini-Land-Desktop, $height){
+		font-size: 2.8rem;
+	}
+
+}
+p {
+    font-size: 1.6rem;
+}

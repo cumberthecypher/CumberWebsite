@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Cumber tha Cypher, Africa's newest Hip Hop and Afropop artist">
+    <meta name="keywords" content="CumbertheCypher,CumberthaCypher,Afropop,Hiphop,Afrobeats,#Believe,#Miracle,">
+    <meta name="author" content="Borne ID and Cumber">
+    <title>Cumber tha Cypher</title>
+    <script src="https://use.fontawesome.com/ad0c0a0c7a.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+
+    <!-- --- I DON'T THINK I'M USING ANY REACT IN THIS JOB?? ============== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.2/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.2/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- these are the music player links -->
+    <script src="musicPlayer.js"></script>
+    <link href="cumber_css/musicPlayer.css" rel="stylesheet">
+    <link href="https://cdn.plyr.io/3.5.6/plyr.css" rel="stylesheet">
+
+    <script src="music-player-script1.js"></script>
+    <script src="music-player-script2.js"></script>
+
+    <!-- KEEP THESE TWO LINKS BELOW FOR FUTURE REFERENCE... These are the two links that i used for the two music-player-scripts above -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/html5media/1.1.8/html5media.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.5.6/plyr.min.js"></script> -->
+
+    <!-- Normalize stylesheet I DON'T THINK I'M USING THIS!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+    <!-- Bootstrap 3 -->
+    <link rel='stylesheet prefetch'
+        href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+
+    <!-- Main stylesheet - I HAVE THIS IMPORTING INTO THE STYLE.SCSS-->
+    <link rel="stylesheet" href="cumber_css/cumberstyle.css" />
+
+    <!-- this is for font awesome - i went to website to get it -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+<body>
+    <div class="main_wrapper">
+        <div class="header-top-nav">
+            <a href="#home-link" class="logo-box"></a>
+            <div class="nav-sec">
+                <ul>
+                    <a href="#home-link">
+                        <li>Home</li>
+                    </a>
+                    <a href="#music-link">
+                        <li>Music</li>
+                    </a>
+                    <a href="#video-link">
+                        <li>Gallery</li>
+                    </a>
+                    <a href="#about-link">
+                        <li>About</li>
+                    </a>
+                    <a href="#contact-link">
+                        <li>Contact</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+        <section class="home-top-image-section" id="home-link">
+            <h1>Cumber tha Cypher</h1>
+            <img src=".//cumber_images/Cumber-tha-Cypher-logo-gold.png" alt="Cumber tha Cypher">
+        </section>
+
+        <section class="music-section" id="music-link">
+            <div class="section-header">
+                <div class="spacer"></div>
+                <h2>Music</h2>
+            </div>
+            <div class="section-content music-content">
+                <!-- this is the start of the MUSIC PLAYER TEMPLATE -->
+                <div class="container">
+                    <div class="column add-bottom">
+                        <div id="mainwrap">
+                            <div id="nowPlay">
+                                <h2>Listen &amp; Get Cumber's Music:</h2>
+                                <p id="npAction">paused</p>
+                                <div class="title-wrap">
+                                    <p class="quote-n-title">"</p>
+                                    <p id="npTitle" class="quote-n-title"></p>
+                                    <p class="quote-n-title">"</p>
+                                </div>
+                            </div>
+                            <div id="audiowrap">
+                                <div id="audio0">
+                                    <audio id="audio1" preload controls>Your browser does not support HTML5
+                                        Audio!</audio>
+                                </div>
+                                <div id="tracks">
+                                    <a id="btnPrev"><i class="fas fa-fast-backward"></i></a>
+                                    <a id="btnNext"><i class="fas fa-fast-forward"></i></a>
+                                </div>
+                            </div>
+                            <div id="plwrap">
+                                <ul id="plList"></ul>
+                                <ul class="plButtonWrapColumn">
+                                    <li class="plButton"><a href="./buy-music.html" target="_blank">
+                                            <div class="button-helper"></div>Get
+                                        </a></li>
+                                    <li class="plButton"><a href="./buy-music.html" target="_blank">
+                                            <div class="button-helper"></div>Get
+                                        </a></li>
+                                    <li class="plButton"><a href="./buy-music.html" target="_blank">
+                                            <div class="button-helper"></div>Get
+                                        </a></li>
+                                    <li class="plButton"><a href="./buy-music.html" target="_blank">
+                                            <div class="button-helper"></div>Get
+                                        </a></li>
+                                    <li class="plButton"><a href="./buy-music.html" target="_blank">
+                                            <div class="button-helper"></div>Get
+                                        </a></li>
+                                    <li class="plButton"><a href="./buy-music.html" target="_blank">
+                                            <div class="button-helper"></div>Get
+                                        </a></li>
+                                    <li class="plButton"><a href="./buy-music.html" target="_blank">
+                                            <div class="button-helper"></div>Get
+                                        </a></li>
+                                    <li class="plButton"><a href="./buy-music.html" target="_blank">
+                                            <div class="button-helper"></div>Get
+                                        </a></li>
+                                    <li class="plButton"><a href="./buy-music.html" target="_blank">
+                                            <div class="button-helper"></div>Get
+                                        </a></li>
+                                    <li class="plButton"><a href="./buy-music.html" target="_blank">
+                                            <div class="button-helper"></div>Get
+                                        </a></li>
+                                    <li class="plButton"><a href="./buy-music.html" target="_blank">
+                                            <div class="button-helper"></div>Get
+                                        </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- THIS IS THE END OF THE MUSIC PLAYER TEMPLATE -->
+            </div>
+        </section>
+
+        <section class="gallery-section" id="video-link">
+            <div class="section-header">
+                <div class="spacer"></div>
+                <h2>Gallery</h2>
+            </div>
+            <div class="section-content gallery-content">
+                <div class="video-responsive">
+                    <div class='video-wrapper1'>
+                        <div class="video-header video1"><h2>"Believe"</h2></div>
+                        <video id="video1" controls
+                            poster='https://borneid.com/cumber_images/believeposterforvideo.jpg'>
+                            <source src="https://borneid.com/videos/CumberBelieveVideo.mp4" type="video/mp4">
+                            Your browser does not support HTML5 video.
+                        </video>
+                    </div>
+                    <div class='video-wrapper2'>
+                        <div class="video-header video2"><h2>"Miracle"</h2></div>
+                        <video id="video2" controls
+                            poster='https://borneid.com/cumber_images/miracleposterforvideo.jpg'>
+                            <source src="https://borneid.com/videos/miracleStudioVideo.mp4" type="video/mp4">
+                            Your browser does not support HTML5 video.
+                        </video>
+                    </div>
+                </div>
+
+                <div class="photo-gallery-row">
+                    <div class="gallery-img"><img src="https://borneid.com/galleryImages/AfricanShrine-final.jpg"
+                            alt="Cumber in front of The New African Shrine"></div>
+                    <div class="gallery-img"><img
+                            src="https://borneid.com/galleryImages/AfrikanShrine-performancead-final.jpg"
+                            alt="Promo ad for Cumber's performance at The New African Shrine"></div>
+                    <div class="gallery-img"><img
+                            src="https://borneid.com/galleryImages/BelieveVideoBehindScenes-final.jpg"
+                            alt="Cumber performing in Believe video"></div>
+                </div>
+                <div class="photo-gallery-row">
+                    <div class="gallery-img"><img src="https://borneid.com/galleryImages/CumberMindBlownpose-final.jpg"
+                            alt="Cumber posing"></div>
+                    <div class="gallery-img"><img
+                            src="https://borneid.com/galleryImages/CumberSensitiveArtistShirt-final.jpg"
+                            alt="Cumber in Sensitive Artist t-shirt"></div>
+                    <div class="gallery-img"><img src="https://borneid.com/galleryImages/neverGiveUp-final.jpg"
+                            alt="Cumber in Never Give Up t-shirt, Believe"></div>
+                </div>
+                <div class="photo-gallery-row">
+                    <div class="gallery-img"><img src="./galleryImages/cumberStudio1-crop.jpg" alt="Cumber in studio">
+                    </div>
+                    <div class="gallery-img"><img src="./galleryImages/cumberStudio2-crop.jpg" alt="Cumber in studio">
+                    </div>
+                    <div class="gallery-img"><img src="./galleryImages/cumberStudio4-crop.jpg" alt="Cumber in studio">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section" id="about-link">
+            <div class="section-header">
+                <div class="spacer"></div>
+                <h2>About</h2>
+            </div>
+            <div class="section-content about-content-image">
+                <div class="about-bio-text">
+                    <p>Cumber tha Cypher is currently one of Africa’s
+                        rising top Afropop musical artists. Bred in Lagos, Nigeria, music has been a part of his blood
+                        and soul since he grew up in a clergy family and he often still performs as a chorister and
+                        plays the drums in his church.</p>
+                    <p>Recording songs since 2008, Cumber has collaborated with some of the finest singers, wrappers,
+                        DJs, and
+                        producers in Nigeria. His songs are motivating, inspiring, and easy to relate to and he often
+                        pulls his own life
+                        stories into his music bringing hope and joy to all he meets through his music. Cumber often
+                        infuses gospel, rap, club vibes and hip hop into his music, keeping you guessing as to what type
+                        of vibe he’s coming out with next.</p>
+                    <p>Influenced by a wide musical range of artists such as Fela Anikulapo Kuti, Bob Marley, Tupac
+                        Shakur, Michael
+                        Jackson, Nas, 50 Cent, Angélique Kidjo, Cumber taps into reggae, hip hop, rap, Afrobeats and
+                        blends them into
+                        some of the newest sounds in Afropop of this decade.</p>
+                    <p>MISSION 2020 - With his hottest hits now being sold and streaming on major online platforms,
+                        Cumber plans to
+                        broaden his vision to the world! While inspiring everyone with his self-encouraging and
+                        inspirational hits such as “Believe” and “Miracle”, he also brings the heat with “Drunk in Love”
+                        and “Fast and Furious”. Continuing his wide range in music, Cumber is excited to rise to the
+                        next level and bring us new hits this year, making 2020 his best year ever! With his formal
+                        debut release song and video titled “BELIEVE”, he is definitely proving to all that no matter
+                        your struggles and no matter where you come from, you must always believe and never give up on
+                        what you want in life.</p>
+                </div>
+                <div class="bio-image-wide"></div>
+            </div>
+        </section>
+
+        <section class="contact-section" id="contact-link">
+            <div class="section-header">
+                <div class="spacer"></div>
+                <h2>Contact</h2>
+            </div>
+
+            <div class="section-content contact-content">
+                <div class="social-media">
+                    <div class="each-icon">
+                        <a class="icon-anchor" href="https://www.facebook.com/ifeoluwapo.oyeniyi" target="_blank">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </div>
+                    <div class="each-icon">
+                        <a class="icon-anchor" href="https://twitter.com/Cumber231" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                    <div class="each-icon">
+                        <a class="icon-anchor" href="https://www.youtube.com/channel/UCg_9p3yj7PT48oY-CprDVzg"
+                            target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                    <div class="each-icon">
+                        <a class="icon-anchor"
+                            href="https://www.instagram.com/Iamcumbersome/?fbclid=IwAR1hCaaEPa1MnfGPPJOWAV9DtIPNoh-wo1039px48XpliF5gDlBlSm4cCgI"
+                            target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                    <div class="each-icon">
+                        <a class="icon-anchor" href="mailto:cumbermusic87@gmail.com" target="_blank">
+                            <i class="fas fa-envelope-square"></i>
+                        </a>
+                    </div>
+                </div>
+                <footer>
+                    <img src=".//cumber_images/Cumber-tha-Cypher-logos-white-final.png"
+                        alt="Cumber tha Cypher, Cumber the Cypher">
+                    <p class="email-height"><a href="mailto:cumbermusic87@gmail.com">cumbermusic87@gmail.com</a></p>
+                    <p>&copy; 2019 | Cumber tha Cypher | All Rights Reserved</p>
+                    <p>Website by Borne ID | &copy; 2019 | <a href="http://www.borneid.com/" target="_blank"
+                            target="_blank">www.BorneID.com</a>
+                        <p>
+                </footer>
+            </div>
+        </section>
+    </div>
+
+
+    <script>
+        // var v = document.getElementsByTagName("video")[0];
+        // var a = document.getElementsByTagName("audio")[0];
+        // a.addEventListener("playing", function () { a.play(); }, true);
+        // v.addEventListener("playing", function () { a.pause(); }, true);
+        // a.addEventListener("playing", function () { v.pause(); }, true);
+
+
+        var v = document.getElementById("video1");
+        var vt = document.getElementById("video2");
+        var a = document.getElementsByTagName("audio")[0];
+        a.addEventListener("playing", function () { a.play(); }, true);
+        v.addEventListener("playing", function () { a.pause(); }, true);
+        vt.addEventListener("playing", function () { a.pause(); }, true);
+        a.addEventListener("playing", function () { v.pause(); }, true);
+        a.addEventListener("playing", function () { vt.pause(); }, true);
+        v.addEventListener("playing", function () { vt.pause(); }, true);
+        vt.addEventListener("playing", function () { v.pause(); }, true);
+
+
+        // function myFunction() {
+        //     if (!v.playing) {
+        //         v.play();
+        //         console.log("video now playing");
+        //     }
+        //     else {
+        //         console.log("video now playing");
+        //         v.play();
+
+        //     }
+        // }
+    </script>
+</body>
+
+</html>
