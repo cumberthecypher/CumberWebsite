@@ -95,7 +95,8 @@
                                 </div>
                             </div>
                             <div id="audiowrap">
-                                <div id="audio0">
+                                <!-- <div id="audio0"> -->
+                                <div id="audiotracks">
                                     <audio id="audio1" preload controls>Your browser does not support HTML5
                                         Audio!</audio>
                                 </div>
@@ -292,6 +293,12 @@
     </div>
 
     <script>
+        // var playPromise = document.querySelector('video').play();
+        // var playPromiseAudio = document.querySelector('audio').play();
+
+        
+        $('#audiotracks').html('<audio autoplay><source src="audio/ding.mp3"></audio>');
+
         var v = document.getElementById("video1");
         var vt = document.getElementById("video2");
         var a = document.getElementsByTagName("audio")[0];
