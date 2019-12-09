@@ -155,20 +155,22 @@
                 <h2>Gallery</h2>
             </div>
             <div class="section-content gallery-content">
+
+
+
+
                 <div class="video-responsive">
                     <div class='video-wrapper1'>
                         <div class="video-header video1"><h2>"Believe"</h2></div>
-                        <video id="video1" controls
-                            poster='./cumber_images/believeposterforvideo.jpg'>
+                        <video id="video1" controls poster='./cumber_images/believeposterforvideo.jpg' preload="none">
                             <source src="./videos/CumberBelieveVideo.mp4" type="video/mp4">
                             Your browser does not support HTML5 video.
                         </video>
                     </div>
                     <div class='video-wrapper2'>
                         <div class="video-header video2"><h2>"Miracle"</h2></div>
-                        <video id="video2" controls
-                            poster='./cumber_images/miracleposterforvideo.jpg'>
-                            <source src="./videos/miracleStudioVideo.mp4" type="video/mp4">
+                        <video id="video2" controls poster='./cumber_images/miracleposterforvideo.jpg' preload="none">
+                            <source src="./videos/CumberBelieveVideo.mp4" type="video/mp4">
                             Your browser does not support HTML5 video.
                         </video>
                     </div>
@@ -293,6 +295,8 @@
 
     <script>
 
+
+
             var playPromise = document.querySelector('audio').play();
                 // In browsers that don’t yet support this functionality,
                 // playPromise won’t be defined.
@@ -309,13 +313,15 @@
                 });
             }
 
-         var playPromiseVideo = document.querySelector('video').play();
+        var playPromiseVideos = document.querySelector( "#video1, #video2" ).play();
+
+        //  var playPromiseVideo = document.querySelector('video').play();
             // In browsers that don’t yet support this functionality,
                 // playPromise won’t be defined.
-                if (playPromiseVideo !== undefined) {
+                if (playPromiseVideos !== undefined) {
                     console.log("i AM IN the Video play promise");
 
-                playPromiseVideo.then(function() {
+                playPromiseVideos.then(function() {
                     // Automatic playback started!
                 }).catch(function(error) {
                     // Automatic playback failed.
@@ -332,37 +338,21 @@
         var a = document.getElementsByTagName("audio")[0];
 
 
-        var playAudio = playPromise[0];
-        var playVideo = playPromiseVideo;
 
-        // a.addEventListener("playing", function () { a.play(); }, true);
-        // a.addEventListener("playing", function () { a.playAudio; }, true);
-
-
-        // v.addEventListener("playing", function () { a.pause(); }, true);
-        // v.addEventListener("playing", function () { a.pause(); }, true);
-
-
-
-        // vt.addEventListener("playing", function () { a.pause(); }, true);
-        // a.addEventListener("playing", function () { v.pause(); }, true);
-        // a.addEventListener("playing", function () { vt.pause(); }, true);
-        // v.addEventListener("playing", function () { vt.pause(); }, true);
-        // vt.addEventListener("playing", function () { v.pause(); }, true);
 
 
 
     //    original code here -------------------
-        // var v = document.getElementById("video1");
-        // var vt = document.getElementById("video2");
-        // var a = document.getElementsByTagName("audio")[0];
-        // a.addEventListener("playing", function () { a.play(); }, true);
-        // v.addEventListener("playing", function () { a.pause(); }, true);
-        // vt.addEventListener("playing", function () { a.pause(); }, true);
-        // a.addEventListener("playing", function () { v.pause(); }, true);
-        // a.addEventListener("playing", function () { vt.pause(); }, true);
-        // v.addEventListener("playing", function () { vt.pause(); }, true);
-        // vt.addEventListener("playing", function () { v.pause(); }, true);
+        var v = document.getElementById("video1");
+        var vt = document.getElementById("video2");
+        var a = document.getElementsByTagName("audio")[0];
+        a.addEventListener("playing", function () { a.play(); }, true);
+        v.addEventListener("playing", function () { a.pause(); }, true);
+        vt.addEventListener("playing", function () { a.pause(); }, true);
+        a.addEventListener("playing", function () { v.pause(); }, true);
+        a.addEventListener("playing", function () { vt.pause(); }, true);
+        v.addEventListener("playing", function () { vt.pause(); }, true);
+        vt.addEventListener("playing", function () { v.pause(); }, true);
     </script>
 </body>
 
