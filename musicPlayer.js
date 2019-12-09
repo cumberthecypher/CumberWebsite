@@ -23,7 +23,7 @@ jQuery(function ($) {
         var index = 0,
             playing = false,
             // mediaPath = 'https://archive.org/download/mythium/', this is the original song path from music player template
-            mediaPath = '/audio/',
+            mediaPath = './audio/',
             extension = '',
             tracks = [{
                 "image": "<img src='./covers-images-final/Believe.jpg' alt='Believe by Cumber' />",
