@@ -292,16 +292,19 @@
     </div>
 
     <script>
-        // $('#audiotracks').html('<audio autoplay><source src="audio/ding.mp3"></audio>');
 
             var playPromise = document.querySelector('audio').play();
                 // In browsers that don’t yet support this functionality,
                 // playPromise won’t be defined.
                 if (playPromise !== undefined) {
+                    console.log("i AM IN the AUDIO play promise");
+
                 playPromise.then(function() {
                     // Automatic playback started!
                 }).catch(function(error) {
                     // Automatic playback failed.
+                    console.log("i failed in the AUDIO play promise");
+
                     // Show a UI element to let the user manually start playback.
                 });
             }
@@ -310,27 +313,38 @@
             // In browsers that don’t yet support this functionality,
                 // playPromise won’t be defined.
                 if (playPromiseVideo !== undefined) {
+                    console.log("i AM IN the Video play promise");
+
                 playPromiseVideo.then(function() {
                     // Automatic playback started!
                 }).catch(function(error) {
                     // Automatic playback failed.
+                    console.log("i failed in the Video play promise");
+
                     // Show a UI element to let the user manually start playback.
                 });
             }
 
 
-        // var v = document.getElementById("video1");
-        // var vt = document.getElementById("video2");
+        var v = document.getElementById("video1");
+        var vt = document.getElementById("video2");
 
-        // var a = document.getElementsByTagName("audio")[0];
+        var a = document.getElementsByTagName("audio")[0];
 
 
-        var a = playPromise[0];
-        var v = playPromiseVideo;
+        var playAudio = playPromise[0];
+        var playVideo = playPromiseVideo;
 
-        a.addEventListener("playing", function () { a.play(); }, true);
+        // a.addEventListener("playing", function () { a.play(); }, true);
+        a.addEventListener("playing", function () { a.playAudio; }, true);
+
+
+        // v.addEventListener("playing", function () { a.pause(); }, true);
         v.addEventListener("playing", function () { a.pause(); }, true);
-        // vt.addEventListener("playing", function () { a.pause(); }, true);
+
+
+
+        vt.addEventListener("playing", function () { a.pause(); }, true);
         a.addEventListener("playing", function () { v.pause(); }, true);
         // a.addEventListener("playing", function () { vt.pause(); }, true);
         // v.addEventListener("playing", function () { vt.pause(); }, true);
