@@ -23,70 +23,70 @@ jQuery(function ($) {
         var index = 0,
             playing = false,
             // mediaPath = 'https://archive.org/download/mythium/', this is the original song path from music player template
-            mediaPath = 'https://borneid.com/audio/',
+            mediaPath = '/audio/',
             extension = '',
             tracks = [{
-                "image": "<img src='https://borneid.com/covers-images-final/Believe.jpg' alt='Believe by Cumber' />",
+                "image": "<img src='./covers-images-final/Believe.jpg' alt='Believe by Cumber' />",
                 "track": 1,
                 "name": "Believe",
                 "duration": "3:26",
                 "file": "Believe-short"
             }, {
-                "image": "<img src='https://borneid.com/covers-images-final/Miracle.jpg' alt='Miracle by Cumber' />",
+                "image": "<img src='./covers-images-final/Miracle.jpg' alt='Miracle by Cumber' />",
                 "track": 2,
                 "name": "Miracle",
                 "duration": "3:59",
                 "file": "Miracle-short"
             }, {
-                "image": "<img src='https://borneid.com/covers-images-final/FastAndFurious.jpg' alt='Fast and Furious by Cumber' />",
+                "image": "<img src='./covers-images-final/FastAndFurious.jpg' alt='Fast and Furious by Cumber' />",
                 "track": 3,
                 "name": "Fast and Furious",
                 "duration": "3:40",
                 "file": "Fast_and_Furious-short"
             }, {
-                "image": "<img src='https://borneid.com/covers-images-final/Cassava.jpg' alt='Cassava by Cumber' />",
+                "image": "<img src='./covers-images-final/Cassava.jpg' alt='Cassava by Cumber' />",
                 "track": 4,
                 "name": "Cassava",
                 "duration": "3:44",
                 "file": "Cassava-short"
             }, {
-                "image": "<img src='https://borneid.com/covers-images-final/DrunkInLove.jpg' alt='Drunk in Love by Cumber' />",
+                "image": "<img src='./covers-images-final/DrunkInLove.jpg' alt='Drunk in Love by Cumber' />",
                 "track": 5,
                 "name": "Drunk in Love",
                 "duration": "4:26",
                 "file": "Drunk_In_Love-short"
             }, {
-                "image": "<img src='https://borneid.com/covers-images-final/Bugashi.jpg' alt='Bugashi by Cumber' />",
+                "image": "<img src='./covers-images-final/Bugashi.jpg' alt='Bugashi by Cumber' />",
                 "track": 6,
                 "name": "Bugashi",
                 "duration": "3:48",
                 "file": "Bugashi-short"
             }, {
-                "image": "<img src='https://borneid.com/covers-images-final/WhoDemLockOutside.jpg' alt='Who Dem Lock Outside by Cumber (feat.) JayDrillz' />",
+                "image": "<img src='./covers-images-final/WhoDemLockOutside.jpg' alt='Who Dem Lock Outside by Cumber (feat.) JayDrillz' />",
                 "track": 7,
                 "name": "Who Dem Lock Outside",
                 "duration": "3:36",
                 "file": "Who_Dem_Lock_Outside-short"
             }, {
-                "image": "<img src='https://borneid.com/covers-images-final/BadmanThing.jpg' alt='Bad Man Thing by Cumber' />",
+                "image": "<img src='./covers-images-final/BadmanThing.jpg' alt='Bad Man Thing by Cumber' />",
                 "track": 8,
                 "name": "Bad Man Thing",
                 "duration": "3:19",
                 "file": "Bad_Man_Thing-short"
             }, {
-                "image": "<img src='https://borneid.com/covers-images-final/OutofControl.jpg' alt='Out of Control by Cumber' />",
+                "image": "<img src='./covers-images-final/OutofControl.jpg' alt='Out of Control by Cumber' />",
                 "track": 9,
                 "name": "Out of Control",
                 "duration": "4:26",
                 "file": "Out_of_Control-short"
             }, {
-                "image": "<img src='https://borneid.com/covers-images-final/Mapouka.jpg' alt='Mapouka by Cumber' />",
+                "image": "<img src='./covers-images-final/Mapouka.jpg' alt='Mapouka by Cumber' />",
                 "track": 10,
                 "name": "Mapouka",
                 "duration": "3:37",
                 "file": "Mapouka-short"
             }, {
-                "image": "<img src='https://borneid.com/covers-images-final/AiyeForieng.jpg' alt='Aiye Forieng by Cumber' />",
+                "image": "<img src='./covers-images-final/AiyeForieng.jpg' alt='Aiye Forieng by Cumber' />",
                 "track": 11,
                 "name": "Aiye Forieng",
                 "duration": "3:06",
