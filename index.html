@@ -13,6 +13,10 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
 
+    <!-- weird favicon 404 error -->
+    <link rel="shortcut icon" href="#" />
+    <link rel="shortcut icon" href="favicon.ico">
+
     <!-- --- I DON'T THINK I'M USING ANY REACT IN THIS JOB?? ============== -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.2/react.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.2/react-dom.js"></script>
@@ -157,6 +161,14 @@
             <div class="section-content gallery-content">
 
                 <div class="video-responsive">
+                    <div class='video-wrapper2'>
+                        <div class="video-header video2"><h2>"Miracle"</h2></div>
+                        <video id="video2" controls poster='./cumber_images/miracleposterforvideo.jpg' preload="none">
+                            <source src="./videos/Video_MiracleConverted.mp4">
+                            Your browser does not support HTML5 video.
+                        </video>
+                    </div>
+
                     <div class='video-wrapper1'>
                         <div class="video-header video1"><h2>"Believe"</h2></div>
                         <video id="video1" controls poster='./cumber_images/believeposterforvideo.jpg' preload="none">
@@ -164,14 +176,18 @@
                             Your browser does not support HTML5 video.
                         </video>
                     </div>
-                    <div class='video-wrapper2'>
-                        <div class="video-header video2"><h2>"Miracle"</h2></div>
-                        <video id="video2" controls poster='./cumber_images/miracleposterforvideo.jpg' preload="none">
-                            <source src="./videos/Video_MiracleConverted.mp4" type="video/mp4">
-                            Your browser does not support HTML5 video.
-                        </video>
-                    </div>
                 </div>
+
+                <!-- 
+                <div class="video-section-wrapper">
+                    <div class="youtube-wrapper">
+                        <iframe src="https://www.youtube.com/embed/o7CY30HbQ0c?start=1" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                        
+                    <div class="youtube-wrapper">
+                        <iframe src="https://www.youtube.com/embed/lWyfFAmy_FY?start=1" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div> -->
 
                 <div class="photo-gallery-row">
                     <div class="gallery-img"><img src="./galleryImages/AfricanShrine-final.jpg"
