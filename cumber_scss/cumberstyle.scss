@@ -489,26 +489,25 @@
 		p {
 			text-indent: 2rem;
 			color: #ffffff;
-			font-weight: 100;
-			font-size: 1.3rem;
-			line-height: 1.4;
+			font-weight: 400;
+			font-size: 1.4rem;
 			padding-bottom: 0.5rem;
 	
 			@include responsivemin($iPhone-6-8-Port, $height){
-				font-size: 1.4rem;
+				font-size: 1.5rem;
 			}
 			@include responsivemin($iPad_iPadMini-Port, $height){
 				font-size: 1.6rem;
-				line-height: 1.6;
 			}
 			@include responsivemin($laptopTouch_1280, $height){
-				font-size: 1.7rem;
-				line-height: 1.75;
+				font-size: 1.8rem;
 			}
 			@include responsivemin($Wide-Desktop, $height){
 				font-size: 2.0rem;
-				line-height: 1.9;
 				padding-bottom: 1.2rem;
+			}
+			@include responsivemin($ExtraLarge-Desktop, $height){
+				font-size: 2.2rem;
 			}
 		}
 	}
@@ -539,25 +538,31 @@
 	}
 
 	.social-media {
+		width: 90%;
+		margin: 0 auto;
 		display: -webkit-box;
 		display: -moz-box;
 		display: -ms-flexbox;
 		display: -webkit-flex;
 		display: flex;
 		flex-direction: row;
-		justify-content: center;
+		justify-content: space-between;
+
+		@include responsivemin($iPad_iPadMini-Port, $height){
+			width: 80%;
+		}
 	}
 	.each-icon {
 		display:inline-block;
 		vertical-align: top;
-		padding: 2.0rem;
+		padding: 2.0rem 0;
 	
 		i {
 			color:#FFFFFF;
-			font-size: 2.5rem;
+			font-size: 4rem;
 
 			@include responsivemin($iPad_iPadMini-Port, $height){
-				font-size: 4rem;
+				font-size: 7rem;
 			}
 			
 			&:hover {
@@ -577,7 +582,7 @@ footer {
 	padding: 2rem 0;
 
 	@include responsivemin($iPad_iPadMini-Port, $height){
-		padding: 3rem 4rem 4rem;
+		padding: 3rem 0 4rem;
 	}
 
 	img {
@@ -586,29 +591,31 @@ footer {
 		padding: 2.0rem 0 0rem;
 
 		@include responsivemin($GalaxySIII, $height){
-			width: 60%;
+			width: 80%;
 		}
 		@include responsivemin($iPhone-4-Land, $height){
-			width: 35%;
+			width: 40%;
 		}
 		@include responsivemin($iPad_iPadMini-Port, $height){
-			width: 35%;
-		}
-		@include responsivemin($Nexus7_land_960w, $height) {
-			width: 30%;
+			width: 60%;
 		}
 		@include responsivemin($iPad_iPadMini-Land-Desktop, $height) {
-			width: 25%;
+			width:50%;
 		}
 		@include responsivemin($laptopTouch_1280, $height) {
-			width: 15%;
+			width: 35%;
+		}
+		@include responsivemin($Wide-Desktop, $height){
+			// width: 35%;
+		}
+		@include responsivemin($ExtraLarge-Desktop, $height){
+			width: 30%;
 		}
 	}
 
 	p, a {
 		font-size: 1.2rem;
-		color: #FFFFFF;
-		line-height: 2;
+		color: #FFF;
 
 		@include responsivemin($GalaxySIII, $height){
 			font-size: 1.3rem;
@@ -620,39 +627,68 @@ footer {
 			font-size: 1.8rem;
 		}
 	}
-	a:hover {
+	a {
 		color: rgba(0,244,255,0.7) !important;
+		font-weight: bold;
+	}
+	a:hover {
+		color: #00818e !important;
 	}
 
+	.borneid {
+		font-size: 1.3rem;
+		font-weight: regular;
+
+		@include responsivemin($GalaxySIII, $height){
+			font-size: 1.5rem;
+		}
+		@include responsivemin($iPhoneXland_or_KindlePort, $height) {
+			font-size: 1.8rem;
+		}	
+		@include responsivemin($iPad_iPadMini-Port, $height){
+			font-size: 2rem;
+		}
+	}
+	.borneid a {
+		color: #fff !important;
+		font-size: 1.3rem;
+
+		@include responsivemin($GalaxySIII, $height){
+			font-size: 1.5rem;
+		}
+		@include responsivemin($iPhoneXland_or_KindlePort, $height) {
+			font-size: 1.8rem;
+		}	
+		@include responsivemin($iPad_iPadMini-Port, $height){
+			font-size: 2rem;
+		}
+	}
+	.email-height {
+		// border: 1px solid red;
+		display: block;
+		margin-bottom: 2rem;
+	}
 	.email-height a {
-		line-height: 3;
 		font-size: 1.6rem;
 
 		@include responsivemin($iPhoneXland_or_KindlePort, $height) {
-			font-size: 2.0rem;
+			font-size: 2rem;
 		}	
 		@include responsivemin($iPad_iPadMini-Port, $height){
 			font-size: 2.2rem;
 		}
-
-		&:hover {
-			color: rgba(0,244,255,0.7)!important;
-
+	}
+	h4 {
+		color: #FFF;
+		font-size: 1.6rem;
+		font-weight: bold;
+		margin-top: 2rem;
+		
+		@include responsivemin($iPhoneXland_or_KindlePort, $height) {
+			font-size: 2rem;
+		}	
+		@include responsivemin($iPad_iPadMini-Port, $height){
+			font-size: 2.2rem;
 		}
 	}
 }
-
-
-
-// VIMEO STYLES FOR video go here
-// iframe .vp-center .vp-controls-wrapper .vp-title header.vp-title-header .headers .sub-title .byline-from {
-// 	display: none !important;
-// }
-
-// #player .vp-title .vp-title-header h2 {
-// 	display: none !important;
-// }
-
-// iframe #player .vp-controls-wrapper {
-// 	display: none !important;
-// }
