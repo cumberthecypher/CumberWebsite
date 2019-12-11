@@ -254,26 +254,30 @@
 	.gallery-content {
 		width: 100%;
 		display: block;
-		background: #111;
-		padding: 4.0rem 2.0rem;
+		// background: #111;
+		background: #222;
+		// background: #CCC;
+		padding: 4rem 2rem 2rem;
+		// border: 2px solid orange;
 
-		@include responsivemin($iPad_iPadMini-Port, $height){
-			padding: 4.0rem;
+		@include responsivemin($iPhone-6-8-Port, $height){
+			padding: 4rem 4rem 0;
 		}
+	
 		@include responsivemin($laptopTouch_1280, $height){
-			padding: 6.0rem;
+			padding: 6rem 6rem 0;
 		}
 		@include responsivemin($Wide-Desktop, $height){
-			padding: 8.0rem;
+			padding: 10rem 8rem 0;
 		}
 		@include responsivemin($ExtraLarge-Desktop, $height){
-			padding: 10.0rem;
+			padding: 12rem 12rem 0;
 		}
-
 		.video-responsive{
 			overflow:hidden;
 			position:relative;
 			height: auto;
+			// border: 1px solid purple;
 		}
 		.video-responsive video {
 			height: auto;
@@ -287,40 +291,41 @@
 		.video-wrapper1, .video-wrapper2 {
 			position: relative;
 			text-align: center;
-			margin-bottom: 4rem;
 			max-width: 100%;
 			background-color: #000;
 			overflow: hidden;
-		}
-		.video-wrapper1 {
 			height: 100%;
+			// border: 1px solid red;
 		}
+	
+
+		// RED AND PURPLE
+		.video-responsive, .video-wrapper1{
+			margin-bottom: 2rem;
+
+			@include responsivemin($iPhone-6-8-Port, $height){
+				margin-bottom: 4rem;
+			}
+			@include responsivemin($laptopTouch_1280, $height){
+				margin-bottom: 6rem;
+			}
+			@include responsivemin($Wide-Desktop, $height){
+				margin-bottom: 8rem;
+			}
+			@include responsivemin($ExtraLarge-Desktop, $height){
+				margin-bottom: 12rem;
+
+			}
+		}
+
 		.video-wrapper2 {
 			height: 100%;
 			position: relative;
 			text-align: center;
-			margin-bottom: 4rem;
 			width: 100%;
 			display: block;
+			// border: 1px solid pink;
 		}
-
-
-
-		// .video-section-wrapper {
-		// 	border: 1px solid red;
-		// 	display: block;
-		// 	width: 100%;
-		// }
-		// iframe {
-		// 	width:560px;
-		// 	height:315px;
-		// }
-
-		// .youtube-wrapper {
-		// 	border: 1px solid pink;
-		// 	margin-bottom: 4rem;
-		// }
-
 
 		h2 {
 			color: #fff;
@@ -349,67 +354,73 @@
 			}
 		}
 
-		.photo-gallery-row {
+		.photo-gallery-wrapper {
+			// border: 1px solid blue;
 			width: 100%;
 			display: flex;
 			justify-content: space-between;
-			margin-bottom: 4rem;
-
-			@include responsivemin($Nexus7-Port, $height){ 
-				margin-bottom: 4rem;
-			}
-		}
-		.photo-gallery-row:last-child {
-			margin-bottom: 0rem;
+			align-content:  space-between;
+			flex-direction: row;
+			flex-wrap: wrap;
 		}
 
 		.gallery-img {
-			width: 100px;
-			height: 100px;
 			display: inline-block;
 			color: white;
-			padding: 0 0 1.5rem;
 			text-align: center;
 			overflow: hidden;
-			border: 1px solid #000;
+			// border: 1px solid #000;
+			align-items: center;
+			width: 100%;
+			height: auto;
+			margin-bottom: 2rem;
 
-			@include responsivemin($Nexus7-Port, $height){ 
-				width: 160px;
-				height: 160px;
+			@include responsivemin($iPhone-6-8-Port, $height){
+				margin-bottom: 4rem;
 			}
-			@include responsivemin($iPhone-6-8-Land, $height){ 
-				width: 220px;
-				height: 220px;
+			@include responsivemin($Nexus7-Port, $height){
+				width: 145px;
+				height: 145px;
+			}
+			@include responsivemin($iPhone-6-8PLUS-Land, $height){
+				width: 190px;
+				height: 190px;
 			}
 			@include responsivemin($iPad_iPadMini-Port, $height){
 				width: 200px;
 				height: 200px;
 			}
-			@include responsivemin($Nexus7_land_960w, $height){ 
-				width: 250px;
-				height: 250px;
+			@include responsivemin($iPhoneXland_or_KindlePort, $height){
+				width: 210px;
+				height: 210px;
+			}
+			@include responsivemin($Nexus7_land_960w, $height){
+				width: 265px;
+				height: 265px;
 			}
 			@include responsivemin($iPad_iPadMini-Land-Desktop, $height){ 
 				width: 290px;
 				height: 290px;
 			}
 			@include responsivemin($laptopTouch_1280, $height){
-				width: 370px;
-				height: 370px;
+				width: 345px;
+				height: 345px;
+				margin-bottom:6rem;
 			}
 			@include responsivemin($Wide-Desktop, $height){
-				width: 410px;
-				height: 410px;
+				width: 370px;
+				height: 370px;
+				margin-bottom: 8rem;
 			}
 			@include responsivemin($ExtraLarge-Desktop, $height){
-				width: 500px;
-				height: 500px;
+				width: 440px;
+				height: 440px;
+				margin-bottom: 12rem;
 			}
 
 			img {
-				max-width: 100%;
-				height: auto;
-				width: auto;
+				height: 100%;
+				width: 100%;
 			}
 		}
 	}

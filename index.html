@@ -14,10 +14,10 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
 
     <!-- weird favicon 404 error -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="manifest" href="/site.webmanifest"> -->
 
     <!-- --- I DON'T THINK I'M USING ANY REACT IN THIS JOB?? ============== -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.2/react.js"></script>
@@ -137,15 +137,9 @@
                                     <li class="plButton"><a href="./musicStoreComingSoon.html" target="_blank">
                                             <div class="button-helper"></div>Get
                                         </a></li>
-                                    <li class="plButton"><a href="./musicStoreComingSoon.html" target="_blank">
-                                            <div class="button-helper"></div>Get
-                                        </a></li>
-                                    <li class="plButton"><a href="./musicStoreComingSoon.html" target="_blank">
-                                            <div class="button-helper"></div>Get
-                                        </a></li>
-                                    <li class="plButton"><a href="./musicStoreComingSoon.html" target="_blank">
-                                            <div class="button-helper"></div>Get
-                                        </a></li>
+                                    <li class="plButton"><a href="./musicStoreComingSoon.html" target="_blank"><div class="button-helper"></div>Get</a></li>
+                                    <li class="plButton"><a href="./musicStoreComingSoon.html" target="_blank"><div class="button-helper"></div>Get</a></li>
+                                    <li class="plButton"><a href="./musicStoreComingSoon.html" target="_blank"><div class="button-helper"></div>Get</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -163,14 +157,6 @@
             <div class="section-content gallery-content">
 
                 <div class="video-responsive">
-                    <div class='video-wrapper2'>
-                        <div class="video-header video2"><h2>"Miracle"</h2></div>
-                        <video id="video2" controls poster='./cumber_images/miracleposterforvideo.jpg' preload="none">
-                            <source src="./videos/VideoMiracleConverted.mp4">
-                            Your browser does not support HTML5 video.
-                        </video>
-                    </div>
-
                     <div class='video-wrapper1'>
                         <div class="video-header video1"><h2>"Believe"</h2></div>
                         <video id="video1" controls poster='./cumber_images/believeposterforvideo.jpg' preload="none">
@@ -178,45 +164,26 @@
                             Your browser does not support HTML5 video.
                         </video>
                     </div>
+
+                    <div class='video-wrapper2'>
+                        <div class="video-header video2"><h2>"Miracle"</h2></div>
+                        <video id="video2" controls poster='./cumber_images/miracleposterforvideo.jpg' preload="none">
+                            <source src="./videos/MiracleVideoByCumber.mp4">
+                            Your browser does not support HTML5 video.
+                        </video>
+                    </div>
                 </div>
 
-                <!-- 
-                <div class="video-section-wrapper">
-                    <div class="youtube-wrapper">
-                        <iframe src="https://www.youtube.com/embed/o7CY30HbQ0c?start=1" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                        
-                    <div class="youtube-wrapper">
-                        <iframe src="https://www.youtube.com/embed/lWyfFAmy_FY?start=1" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                </div> -->
-
-                <div class="photo-gallery-row">
-                    <div class="gallery-img"><img src="./galleryImages/AfricanShrine-final.jpg"
-                            alt="Cumber in front of The New African Shrine"></div>
-                    <div class="gallery-img"><img
-                            src="./galleryImages/AfrikanShrine-performancead-final.jpg"
-                            alt="Promo ad for Cumber's performance at The New African Shrine"></div>
-                    <div class="gallery-img"><img
-                            src="./galleryImages/BelieveVideoBehindScenes-final.jpg"
-                            alt="Cumber performing in Believe video"></div>
-                </div>
-                <div class="photo-gallery-row">
-                    <div class="gallery-img"><img src="./galleryImages/CumberMindBlownpose-final.jpg"
-                            alt="Cumber posing"></div>
-                    <div class="gallery-img"><img
-                            src="./galleryImages/CumberSensitiveArtistShirt-final.jpg"
-                            alt="Cumber in Sensitive Artist t-shirt"></div>
-                    <div class="gallery-img"><img src="./galleryImages/neverGiveUp-final.jpg"
-                            alt="Cumber in Never Give Up t-shirt, Believe"></div>
-                </div>
-                <div class="photo-gallery-row">
-                    <div class="gallery-img"><img src="./galleryImages/cumberStudio1-crop.jpg" alt="Cumber in studio">
-                    </div>
-                    <div class="gallery-img"><img src="./galleryImages/cumberStudio2-crop.jpg" alt="Cumber in studio">
-                    </div>
-                    <div class="gallery-img"><img src="./galleryImages/cumberStudio4-crop.jpg" alt="Cumber in studio">
-                    </div>
+                <div class="photo-gallery-wrapper">
+                    <div class="gallery-img"><img src="./galleryImages/AfricanShrine-final.jpg" alt="Cumber in front of The New African Shrine"></div>
+                    <div class="gallery-img"><img src="./galleryImages/AfrikanShrine-performancead-final.jpg" alt="Promo ad for Cumber's performance at The New African Shrine"></div>
+                    <div class="gallery-img"><img src="./galleryImages/BelieveVideoBehindScenes-final.jpg" alt="Cumber performing in Believe video"></div>
+                    <div class="gallery-img"><img src="./galleryImages/CumberMindBlownpose-final.jpg" alt="Cumber posing"></div>
+                    <div class="gallery-img"><img src="./galleryImages/CumberSensitiveArtistShirt-final.jpg" alt="Cumber in Sensitive Artist t-shirt"></div>
+                    <div class="gallery-img"><img src="./galleryImages/neverGiveUp-final.jpg" alt="Cumber in Never Give Up t-shirt, Believe"></div>
+                    <div class="gallery-img"><img src="./galleryImages/cumberStudio1-crop.jpg" alt="Cumber in studio"> </div>
+                    <div class="gallery-img"><img src="./galleryImages/cumberStudio2-crop.jpg" alt="Cumber in studio"> </div>
+                    <div class="gallery-img"><img src="./galleryImages/cumberStudio4-crop.jpg" alt="Cumber in studio"> </div>
                 </div>
             </div>
         </section>
