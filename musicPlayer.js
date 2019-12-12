@@ -106,9 +106,13 @@ jQuery(function ($) {
                             <div class="plImg">' + trackImage + '</div> \
                             <div class="item-info">\
                                 <div class="helper"></div> \
-                                <div class="plNum">' + trackNumber + '.</div> \
-                                <div class="plTitle">' + trackName + '</div> \
-                                <div class="plLength">' + trackDuration + '</div> \
+                                <div class="inside-wrapper">\
+                                    <div class="plNum">' + trackNumber + '.</div> \
+                                    <div class="plTitle">' + trackName + '</div> \
+                                    <div class="plLength">' + trackDuration + '</div> \
+                                </div>\
+                            </div> \
+                        </div> \
                 </li>');
             }),
 
@@ -117,7 +121,7 @@ jQuery(function ($) {
             npTitle = $('#npTitle'),
             audio = $('#audio1').on('play', function () {
                 playing = true;
-                npAction.text('now playing');
+                npAction.text('now playing...');
             }).on('pause', function () {
                 playing = false;
                 npAction.text('paused...');

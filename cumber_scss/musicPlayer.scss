@@ -168,6 +168,10 @@ display:none;
         padding: 2rem 0 4rem;
     }
 }
+.title-wrap p {
+    font-weight: 600;
+}
+
 
 .quote-n-title {
     display: inline-block;
@@ -175,7 +179,7 @@ display:none;
     color: #fff;
     line-height: 1;
     font-size: 2rem;
-    font-family:"Open Sans Condensed", sans-serif;
+    // font-family:"Open Sans Condensed", sans-serif;
 
     @include responsivemin($iPhone-4-Land, $height){
         font-size: 2.2rem;
@@ -196,8 +200,10 @@ display:none;
 #nowPlay p#npAction {
     color: white;
     font-size: 1.6rem;
+    font-weight: 600;
     display:inline-block;
-    font-family:"Open Sans Condensed", sans-serif;
+    font-style: italic;
+    // font-family:"Open Sans Condensed", sans-serif;
 
     @include responsivemin($iPhone-4-Land, $height){
         font-size: 1.8rem;
@@ -212,9 +218,10 @@ display:none;
 
 #nowPlay p#npTitle {
     font-size: 2rem;
+    font-weight: bold;
     color: white;
     display:inline-block;
-    font-family:"Open Sans Condensed", sans-serif;
+    // font-family:"Open Sans Condensed", sans-serif;
 
     @include responsivemin($iPhone-4-Land, $height){
         font-size: 2.2rem;
@@ -390,36 +397,28 @@ color:rgba(0,0,0,.1);
 
 .plButton a {
     color: $blackText;
-    font-weight: 700;
     vertical-align: middle;
     display: inline-block;
     width: 100%;
-    // font-size: 1.6rem !important;
-    font-size: 1.6rem;
-    font-weight: 400;
+    font-size: 1.8rem;
+    // font-weight: 600;
 
     @include responsivemin($iPhone-6-8-PlusPort, $height){
-        // font-size: 1.8rem !important;
-        font-size: 1.8rem;
+        // font-size: 1.8rem;
     }
     @include responsivemin($iPhone-4-Land, $height){
-        // font-size: 2.0rem !important;
         font-size: 2.0rem;
     }
     @include responsivemin($Nexus7-Port, $height){
-        // font-size: 2.0rem !important;
         font-size: 2.0rem;
     }
     @include responsivemin($iPad_iPadMini-Port, $height){
-        // font-size: 2.4rem !important;
         font-size: 2.4rem;
     }
     @include responsivemin($iPad_iPadMini-Land-Desktop, $height){
-        // font-size: 2.8rem !important;
         font-size: 2.8rem;
     }
     @include responsivemin($laptopTouch_1280, $height){
-        // font-size: 3rem !important;
         font-size: 3rem;
     }
 
@@ -448,7 +447,6 @@ color:rgba(0,0,0,.1);
     width: 100%;
     color: #FFFFFF;
 
-
     .item-wrapper {
         display: flex;
         width: 100%;
@@ -457,16 +455,13 @@ color:rgba(0,0,0,.1);
         justify-content: space-between;
     }
 
-    .plImg, .item-info, .plNum, .plTitle, .plLength {
-        display: inline-block;
+    .plImg {
         vertical-align: middle;
         font-family: 'Open Sans Condensed', sans-serif;
-        font-size: 1.6rem;
-        font-weight: 400;
+        font-size: 1.8rem;
+        font-weight: 600;
+        height: 100%;
 
-        @include responsivemin($iPhone-6-8-PlusPort, $height){
-            font-size: 1.8rem;
-        }
         @include responsivemin($iPhone-4-Land, $height){
             font-size: 2.0rem;
         }
@@ -483,12 +478,12 @@ color:rgba(0,0,0,.1);
             font-size: 3rem;
         }
     }
-   
+
     .plImg {
         display: inline-block;
         width: 60px;
         height: 60px;
-      
+    
             @include responsivemin($iPad_iPadMini-Port, $height){
                 width:  75px;
                 height: 75px;
@@ -506,47 +501,84 @@ color:rgba(0,0,0,.1);
             }
         }
     }
-  
+
     .item-info {
         width: calc(100% - 60px);
-        align-items: center;
         text-align: left;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: flex-start;
+        // display: flex;
+        // flex-direction: row;
+        // flex-wrap: nowrap;
+        display: table;
+        height: 60px;
 
         @include responsivemin($iPad_iPadMini-Port, $height){
             width: calc(100% - 75px);
             left:  75px;
+            height: 75px;
         }
 
         .helper {
-            height: 60px;
-            width: 0%;
+            background: pink;
+            display: inline-block;
+            vertical-align: middle;
+        }
 
+        .inside-wrapper {
+            display: table;
+            vertical-align: middle;
+            padding-top: 3px;
+
+            @include responsivemin($iPad_iPadMini-Land-Desktop, $height){
+                padding-top: 0px;
+            }
+        }
+
+        .plNum, .plTitle, .plLength {
+            display: table-cell;
+            vertical-align: middle;
+            font-family: 'Open Sans Condensed', sans-serif;
+            font-size: 1.7rem;
+            font-weight: 600;
+            height: 100%;
+
+            @include responsivemin($iPhone-6-8-Port, $height){
+                font-size: 1.8rem;
+            }
+            @include responsivemin($iPhone-4-Land, $height){
+                font-size: 2.0rem;
+            }
+            @include responsivemin($Nexus7-Port, $height){
+                font-size: 2.0rem;
+            }
             @include responsivemin($iPad_iPadMini-Port, $height){
-                height: 75px;
+                font-size: 2.4rem;
+            }
+            @include responsivemin($iPad_iPadMini-Land-Desktop, $height){
+                font-size: 2.8rem;
+            }
+            @include responsivemin($laptopTouch_1280, $height){
+                font-size: 3rem;
             }
         }
 
         .plNum {
-            margin-right: 5px;
-            padding-left: 5px;
+            padding: 0 3px 0 4px;
             order: 1;
 
+            @include responsivemin($iPhone-6-8-Port, $height){
+                padding: 0 5px 0 6px;
+            }
             @include responsivemin($iPhone-6-8-Land, $height){
-                padding-left: 10px;
-                margin-right: 5px;
+                padding: 0 6px 0 10px;
             }
             @include responsivemin($iPad_iPadMini-Port, $height){
-                margin-right: 10px;
+                // margin-right: 10px;
             }
         }
 
         .plTitle {
             order: 2;
-            flex-grow: 2;
+            // flex-grow: 2;
         }
         .plLength {
             display: none;
@@ -563,7 +595,6 @@ color:rgba(0,0,0,.1);
 
 .plSel .plItem .item-info {
    background-color:rgba(0, 244, 255, 0.7);
-//    color: #000;
 
     cursor:default !important;
     font-weight: 600;
