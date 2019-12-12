@@ -11,15 +11,20 @@ body {
 .store-outer-wrapper {
     width: 100%;
     height: 100%;
-    background-color: #000;
 	background-repeat:no-repeat;
     background-size: cover;
     background-position-y: 45%;
+
+    background: url('..//cumber_musicStoreBlurredBkgrds/Believe_blurry.jpg') no-repeat center center fixed;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 // here is all the separate song pages css:
 .believe-store {
-    background-image: url("..//cumber_musicStoreBlurredBkgrds/Believe_blurry.jpg");
+    // background-image: url("..//cumber_musicStoreBlurredBkgrds/Believe_blurry.jpg");
 }
 
 .miracle-store {
@@ -38,13 +43,15 @@ body {
     margin: 0 auto;
     color: $blackText;
     overflow-y: scroll;
-    position: relative;
-    overflow-y: scroll;
     display: table;
 
     .topimage {
         width: 100%;
         height: 320px;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 5;
     }
 
     .header {
@@ -52,30 +59,25 @@ body {
         background-color: #181818;
         text-align: center;
         width: 100%;
-        position: -webkit-sticky;
-        position: sticky;
-        top: 0;
-        z-index: 4;
+        z-index: 2;
+        position: relative;
     }
     .header:after {
         content: "";
         display: inline-block;
-        left: 50%;
-        margin-left: -12px;
-        margin-bottom: -12px;
+        margin-bottom: -33px;
         width: 0;
         height: 0;
         bottom: 0;
         border-left: 12px solid transparent;
         border-right: 12px solid transparent;
         border-top: 12px solid #181818;
-        position: absolute;
+        position: relative;
         z-index: 4;
     }
 
     h1, h2, h3 {
         color: #fff;
-
     }
     h1 {
         font-weight: 100;
