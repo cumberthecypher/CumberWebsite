@@ -268,14 +268,14 @@
 		display: inline-block;
 		height: auto;
 
-		@include responsivemin($GalaxyNmore-Land, $height){
+		@include responsivemin($iPhone-6-8PLUS-Land, $height){
 			width: 48.5%;
 		}
 	}
 	.margin-bottom-class {
 		margin-bottom: 2rem;
 
-		@include responsivemin($iPhone-6-8-PlusPort, $height){
+		@include responsivemin($iPhone-6-8PLUS-Land, $height){
 			margin-bottom: 0rem;
 		}
 	}
@@ -408,8 +408,8 @@
 				margin-bottom: 4rem;
 			}
 			@include responsivemin($Nexus7-Port, $height){
-				width: 145px;
-				height: 145px;
+				width: 170px;
+				height: 170px;
 			}
 			@include responsivemin($iPhone-6-8PLUS-Land, $height){
 				width: 190px;
