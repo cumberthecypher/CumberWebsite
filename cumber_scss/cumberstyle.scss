@@ -268,9 +268,6 @@
 		display: inline-block;
 		height: auto;
 
-		@include responsivemin($iPhone-6-8-PlusPort, $height){
-			width: 47%;
-		}
 		@include responsivemin($GalaxyNmore-Land, $height){
 			width: 48.5%;
 		}
