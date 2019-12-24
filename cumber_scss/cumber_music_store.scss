@@ -14,7 +14,7 @@ body {
 	background-repeat:no-repeat;
     background-size: cover;
     background-position-y: 45%;
-
+// KEEP THIS HERE!!!
     background: url('..//cumber_musicStoreBlurredBkgrds/Believe_blurry.jpg') no-repeat center center fixed;
     -moz-background-size: cover;
     -webkit-background-size: cover;
@@ -23,8 +23,13 @@ body {
 }
 
 // here is all the separate song pages css:
+
+.life-store {
+    background-image: url("..//cumber_musicStoreBlurredBkgrds/LIFE_2400x2400-blurred.png");
+}
+
 .believe-store {
-    // background-image: url("..//cumber_musicStoreBlurredBkgrds/Believe_blurry.jpg");
+    background-image: url("..//cumber_musicStoreBlurredBkgrds/Believe_blurry.jpg");
 }
 
 .miracle-store {
