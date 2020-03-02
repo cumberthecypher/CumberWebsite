@@ -1,0 +1,210 @@
+//importing base styles
+@import "cumberstyle";
+
+//importing media query responsive min
+// @import "cumber-masterstyle";
+
+//importing base styles
+@import "cumber_base_styles";
+
+
+// colors
+$black: 000;
+$blackText: #222;
+$white: #fff;
+$red: #af272f;
+$blue: #282832;
+$yellow: #ffff00; 
+
+$height: 0.00em;
+$GalaxySIII: 22.50em; //360px
+$iPhone-6-8-Port: 23.000em;  //23.438em 375px
+$iPhone-6-8-PlusPort: 25.750em;  //414px really 412 = 25.750en
+$iPhone-4-Land: 28.000em;  //30em 480px
+$iPhone-5-Land: 35.500em;  //568px
+$Nexus7-Port: 37.500em; //600px
+$GalaxyNmore-Land: 40.000em;  //640px
+$iPhone-6-8-Land: 41.6875em;  //667px wide
+$iPhone-6-8PLUS-Land: 46.0em;  //736px wide
+$iPad_iPadMini-Port: 48.000em; //768px
+$iPhoneXland_or_KindlePort: 50.000em; //800px or 812px iPhoneX
+$Nexus7_land_960w: 60.00em; //960px wide
+$iPad_iPadMini-Land-Desktop: 64.000em; //1024px
+$iPad_Pro-Portrait: 1024;        //1024x1366
+$laptopTouch_1280: 80.000em; //(1280px x 800)- 80em wide
+$Wide-Desktop: 90em; //1440px
+$ExtraLarge-Desktop: 100em; //1600px
+
+
+@media screen and (min-width: 1400px) {
+	.container {
+	  width: 1370px;
+	}
+  }
+  @media screen and (min-width: 1600px) {
+	.container {
+	  width: 1570px;
+	}
+  }
+  @media screen and (min-width: 1900px) {
+	.container {
+	  width: 1870px;
+	}
+  }
+
+.main_wrapper {
+
+    .management {
+        display: block;
+        background-color: black;
+        font-family: 'Open Sans', sans-serif;
+        width: 100%;
+    
+        @include responsivemin($iPad_iPadMini-Land-Desktop, $height){
+            display: flex;
+        }
+        @media screen and (max-width: 1024px), screen and (max-height: 1366px) {
+            display: block;
+        }
+        @include responsivemin( $laptopTouch_1280, $height){
+            display: flex;
+        }
+            .mgnt-photo {
+                display: block;
+                width: 100%;
+                background-image: url("..//cumber_images/sidePose-Transparent-onBlackBWb.png");
+                background-repeat: no-repeat;
+                background-position-x: right;
+                background-position-y: top;
+                background-size: cover;
+                height: 100vh;
+                max-height: 100vh;
+                min-height: 568px;
+        
+                @include responsivemin($GalaxySIII, $height){
+                    min-height: 640px;
+                }
+                @include responsivemin($iPhone-6-8-PlusPort, $height){
+                    min-height: 736px;
+                }
+                @include responsivemin( $iPad_iPadMini-Port, $height){
+                    height: 100vh;
+                }
+                @include responsivemin($iPad_iPadMini-Land-Desktop, $height){
+                    display: inline-block;
+                    vertical-align: top;
+                    order: 1;
+                    vertical-align: top;
+                    background-position-x: center;
+                    width: 40%;
+                }
+                @media screen and (max-width: 1024px), screen and (max-height: 1366px) {
+                    width: 100%;
+                }
+                @include responsivemin( $laptopTouch_1280, $height){
+                    width: 40%;
+                }
+            }
+        
+            .mgnt-text {
+                display: block;
+                order: 2;
+                text-align: center;
+                width: 100%;
+    
+                @include responsivemin($iPad_iPadMini-Land-Desktop, $height){
+                    order: 2;
+                    display: inline-block;
+                    vertical-align: top;
+                    vertical-align: middle;
+                    width: 60%;
+                    height: 100vh;
+                }
+                @media screen and (max-width: 1024px), screen and (max-height: 1366px) {
+                    width: 100%;
+                    height: initial;
+                    min-height: 236px;
+                }
+                @include responsivemin( $laptopTouch_1280, $height){
+                    width: 60%;
+                    height: 100vh;
+                }
+        
+                .helper {
+                    display: none;
+        
+                    @include responsivemin($iPad_iPadMini-Land-Desktop, $height){
+                        width: 2px;
+                        display: inline-block;
+                        vertical-align: middle;
+                        height: 100%;
+                    }
+                    @media screen and (max-width: 1024px), screen and (max-height: 1366px) {
+                        display:none;
+                    }
+                    @include responsivemin( $laptopTouch_1280, $height){
+                        display: inline-block;
+                        vertical-align: middle;
+                        height: 100%;
+                    }
+                }
+    
+                .text {
+                    display: inline-block;
+                    padding: 6rem 2rem;
+            
+                    @include responsivemin($iPad_iPadMini-Port, $height){
+                        padding: 1rem;
+                    }
+                    @media screen and (max-width: 1024px), screen and (max-height: 1366px) {
+                        padding: 6rem 2rem;
+                    }
+                   
+                    a {
+                        color: rgba(0,244,255,0.7) !important;
+                        font-weight: bold;
+                        font-size: 1.6rem;
+                        cursor: pointer;
+
+                        @include responsivemin($iPhoneXland_or_KindlePort, $height) {
+                            font-size: 2rem;
+                        }	
+                        @include responsivemin($iPad_iPadMini-Port, $height){
+                            font-size: 2.2rem;
+                        }
+                    }
+                    a:hover {
+                        color: #00818e !important;
+                    }
+
+                    h1, h2, h3 {
+                        padding-bottom: 3.0rem;
+                        display: block;
+                        color: #FFF;
+                    }
+        
+                    h1 {
+                        font-size: 3.2rem;
+                        font-weight: 400;
+                        line-height: 1;
+
+                        @include responsivemin($GalaxySIII, $height){
+                            font-size: 4.2rem;
+                        }
+                    }
+                    h3 {
+                        padding-bottom: 1.0rem;
+                        font-size: 1.6rem;
+                        font-weight: bold;
+
+                        @include responsivemin($iPhoneXland_or_KindlePort, $height) {
+                            font-size: 2rem;
+                        }	
+                        @include responsivemin($iPad_iPadMini-Port, $height){
+                            font-size: 2.2rem;
+                        }
+                    }
+                }
+        }
+    }
+}
