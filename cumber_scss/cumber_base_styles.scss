@@ -20,12 +20,14 @@ $GalaxyNmore-Land: 40.000em;  //640px
 $iPhone-6-8-Land: 41.6875em;  //667px wide
 $iPhone-6-8PLUS-Land: 46.0em;  //736px wide
 $iPad_iPadMini-Port: 48.000em; //768px
-$iPhoneXland_or_KindlePort: 50.000em; //800px or 812px iPhoneX
+$KindleFirePortrait800: 50.00em; //800px 
+$iPhoneXland812: 50.75em; // 812px iPhoneX landscape
 $Nexus7_land_960w: 60.00em; //960px wide
 $iPad_iPadMini-Land-Desktop: 64.000em; //1024px
 $laptopTouch_1280: 80.000em; //(1280px x 800)- 80em wide
 $Wide-Desktop: 90em; //1440px
 $ExtraLarge-Desktop: 100em; //1600px
+$iPadProPortrait: 85.375em; //1024 x 1366px wide
 
 @media screen and (min-width: 1400px) {
 	.container {
