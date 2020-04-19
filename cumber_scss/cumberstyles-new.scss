@@ -1,0 +1,904 @@
+//importing media query responsive min
+@import "cumber-masterstyle";
+
+//importing base styles
+@import "cumber_base_styles";
+
+.main_wrapper { 
+	display: block;
+	background-color: #333;
+	font-family: 'Open Sans', sans-serif;
+	width: 100%; 
+	margin: 0 auto;
+	color: $blackText;
+	overflow-y: scroll;
+	height: 100vh;
+	position: relative;
+	  overscroll-behavior: contain;
+}
+
+.header-top-nav { 
+	display: block;
+	width: 100%;
+	position: -webkit-sticky;
+	position: sticky; //KEEP THIS STICKY TOP NAV
+	top: 0;
+	// background: rgba(0,0,0,0.7) -- keep this in case we go back to old cover;
+	background: rgba(0,0,0,0.8);
+	z-index: 99;
+	height: 4.4rem;
+
+		@include responsivemin($iPad_iPadMini-Port, $height){
+			height: 6.0rem;
+		}
+		@include responsivemin($iPad_iPadMini-Land-Desktop, $height){
+			display: -webkit-box;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+		}
+
+		.nav-sec {
+			text-align:center;
+			display:block;
+			width: 100%;
+		
+			ul {
+				display: -webkit-box;
+				display: -moz-box;
+				display: -ms-flexbox;
+				display: -webkit-flex;
+				display: flex;
+				justify-content: space-around;
+			}
+
+			a {
+				display: table;
+				line-height: 2.4;
+			}
+		
+			a li {
+				color: $white;
+				display:table-cell;
+				vertical-align: middle;
+				font-size: 1.6rem;
+				cursor:pointer;
+		
+				&:hover {
+					color: rgba(0,244,255,0.7)!important;
+				}
+				&:active, &:focus {
+					color: #00aab2;
+				}
+				@include responsivemin($GalaxySIII, $height){
+					font-size: 1.8rem;
+					margin: 0px 5px;
+				}
+				@include responsivemin($iPad_iPadMini-Port, $height){
+					font-size: 2.0rem;
+				}
+				@include responsivemin($KindleFirePortrait800, $height){
+					font-size: 2.5rem;
+				}
+			}
+		}
+		//end of TOP NAV SECTION
+}
+
+.albumdrop-icons {
+	display: flex;
+	vertical-align: top;
+	background: yellow;
+	padding: 1rem;
+	position: relative;
+	top: 0rem;
+	left: 0;
+	width: 100%;
+	height: 4.4rem;
+	justify-content: space-between;
+	line-height: 1.5;
+
+	h2 {
+		color: #333;
+		font-weight: 700;
+		font-style: italic;
+		display: inline-block;
+		vertical-align: top;
+		margin-right: 3rem;
+		font-size: 1.8rem;
+		line-height: 1.4;
+
+		@include responsivemin($GalaxySIII, $height){
+			font-size: 2rem;
+			line-height: 1.2;
+			margin-right: 2rem;
+		}
+	}
+
+	.store-icons {
+		display: inline-block;
+		vertical-align: top;
+		
+		a {
+			cursor: pointer;
+			margin: 0 .5rem 0 0 !important;
+			display: inline-block;
+			vertical-align: top;
+
+			@include responsivemin($iPhone-6-8-Port, $height){
+				margin: 0 .7rem 0 0 !important;
+			}
+			@include responsivemin($iPhone-6-8-PlusPort, $height){
+				margin: 0 .8rem 0 0 !important;
+			}
+		}
+		a.itunes {
+			@include responsivemin($iPhone-6-8-Port, $height){
+				margin: 0 .8rem 0 0 !important;
+			}
+			@include responsivemin($iPhone-6-8-PlusPort, $height){
+				margin: 0 .9rem 0 0 !important;
+			}
+		}
+
+		a:hover i {
+			color: #00f3ff;
+			color: blue;
+		}
+
+		a:active {
+			color: #04adb5;
+		}
+
+		i {
+			color: #333;
+			font-size: 1.6rem;
+
+			@include responsivemin($GalaxySIII, $height){
+				font-size: 2.5rem;
+			}
+		}
+
+		.audiomack-logo {
+			background:url("..//cumber_images/audiomack-icon.png");
+			background-repeat:no-repeat;
+			background-position: center;
+			background-size: contain;
+			width: 2.5rem;
+			height: 2.5rem;
+
+			@include responsivemin($GalaxySIII, $height){
+				width: 3.7rem;
+				height: 3.7rem;
+				margin-top: -.7rem;
+			}
+		}
+	}
+}
+
+.section-header {
+	position: relative;
+    display: block;
+	width: 100%;
+	height: 4.0rem;
+	text-align: center;
+	background: rgba(0,129,142,1);
+	z-index: 3;
+
+	@include responsivemin($iPad_iPadMini-Port, $height){
+		height: 6.0rem;
+	}
+
+	.spacer {
+		height: 4.0rem;
+		display:inline-block;
+		vertical-align: middle;
+
+		@include responsivemin($iPad_iPadMini-Port, $height){
+			height: 6.0rem;
+		}
+	}
+
+	h2 {
+		color: #ffffff;
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+
+.section-content {
+	padding: 2.0rem;
+	background-color: #222222;
+
+	@include responsivemin($iPad_iPadMini-Port, $height){
+		padding: 4.0rem;
+	}
+	@include responsivemin($Nexus7_land_960w, $height){
+		padding: 6.0rem;
+	}
+}
+
+.home-top-image-section-new {
+	text-align: center;
+	display: block;
+	position:relative;
+	height: calc(100vh - 8.8rem);
+	width: 100%;
+	// keep this in case we go back to original image;
+	// background-image: url(..//cumber_images/cumberBlueJacket-final.jpg); 
+	background-image: url(..//cumber_images/new-website-background-BREAKTHROUGH.jpg);
+	background-repeat:no-repeat;
+	background-size: cover;
+	background-position-x: center;
+	background-position-y: top;
+    padding: 0;
+	margin: 0;
+
+	//Big Cumber the Cypher logo here
+	// img { 
+	// 	width: 92%;
+	// 	position: absolute;
+  	// 	left: 50%;
+  	// 	top: 77%;
+	// 	transform: translate(-50%, -50%);
+
+	// 	@include responsivemin($iPhone-4-Land, $height){
+	// 		width: 35%;
+	// 		transform: none;
+    // 		left: auto;
+    // 		right: 3%;
+    // 		top: 60%;
+	// 	}
+	// 	@include responsivemin($iPhone-5-Land, $height){
+	// 		right: 2%;
+	// 	}
+	// 	@include responsivemin($iPad_iPadMini-Port, $height){
+	// 		width: 45%;
+	// 	}
+	// 	@include responsivemin($iPad_iPadMini-Land-Desktop, $height){
+	// 		width: 35%;
+	// 	}
+	// }
+
+	h1 {
+		display: none;
+	}
+
+	.helper {
+		display: inline-block;
+		vertical-align: middle;
+		height: calc(100vh - 40px);
+	}
+}
+
+.breakthrough-logo {
+	background: url(..//cumber_images/breakthrough-text-for-Web-1line.png);
+	background-size: cover;
+    background-position: center top;
+    width: 100%;
+    height: 10rem;
+    vertical-align: bottom;
+    display: inline-block;
+	background-repeat: no-repeat;
+	position: absolute;
+    bottom: 0rem;
+    left: 0;
+	
+	@include responsivemin($iPhone-6-8-Port, $height){
+		height: 11rem;
+		bottom: 3rem;
+	}
+	@include responsivemin($iPhone-6-8-PlusPort, $height){
+		height: 12rem;
+		bottom: 2rem;
+	}
+	@include responsivemin($iPhone-4-Land, $height){
+	    height: 7rem;
+    	bottom: 0rem;
+    	background-size: contain;
+	}
+	@include responsivemin($Nexus7-Port, $height){
+		height: 16rem;
+		background-size: cover;
+		bottom: 4rem;
+	}
+	@include responsivemin($GalaxyNmore-Land, $height){
+		height: 7rem;
+		background-size: contain;
+		bottom: 0rem;
+	}
+	@include responsivemin($iPad_iPadMini-Port, $height){
+		height: 20rem;
+		background-size: cover;
+		bottom: 4rem;
+	}
+	@include responsivemin($KindleFirePortrait800, $height){
+		height: 22rem;
+		background-size: cover;
+		bottom: 1rem;
+	}
+	@include responsivemin($iPhoneXland812, $height){
+		height: 9rem;
+		background-size: contain;
+		bottom: 0rem;
+	}
+	@include responsivemin($Nexus7_land_960w, $height){
+		height: 13rem;
+		background-size: contain;
+		bottom: 2rem;
+	}
+	@include responsivemin($iPad_iPadMini-Land-Desktop, $height){
+	    height: 16rem;
+    	bottom: 1rem;
+	}
+	// 1024 x 1366px = iPad Pro PORTRAIT
+	@media (min-width: 1024px) and (min-height: $iPadProPortrait) {
+		height: 22rem;
+		bottom: 1rem;
+		background-size: cover;
+	}
+	@include responsivemin($laptopTouch_1280, $height){
+		height: 18rem;
+		bottom: 1rem;
+		background-size: contain;
+	}
+	@include responsivemin($Wide-Desktop, $height){
+		height: 28rem;
+		bottom: 1rem;
+	}
+	@include responsivemin($ExtraLarge-Desktop, $height){
+		height: 25rem;
+		bottom: 0rem;
+		background-size: contain;
+	}
+
+
+	
+	
+}
+
+// this is for the jump hyperlink to adjust for the sticky nav bar that is 4rem tall
+.music-section::before { 
+	display: block; 
+	content: " "; 
+	margin-top: -4.4rem;
+	height: 4.4rem; 
+	visibility: hidden; 
+	pointer-events: none;
+}
+
+.music-section {
+	background-image: linear-gradient(to bottom, rgba(2, 2, 2, 0.3), rgba(0,0,0,0.7)),url(..//cumber_images/cumberBlueJacket1-rev-orig2.jpg);
+    background-repeat: no-repeat;
+	background-size: cover;
+	background-position-x: center;
+    background-position-y: top;
+
+	@include responsivemin($iPad_iPadMini-Port, $height){
+		// margin-top: -6rem;
+	}
+	.section-header {
+		// background: rgba(0,129,142,0.5) keep this in case we go back to the old cover;
+		// background: rgba(34,235,255,.7);
+		background: #00aebf;
+	}
+	.section-content.music-content {
+		width: 100%;
+		display: block;
+		// background-color: transparent;
+		padding: 0rem;
+	}
+
+	#nowPlay h2 {
+		font-size: 3.5rem; 
+
+		@include responsivemin($iPad_iPadMini-Port, $height){
+			font-size: 5rem;
+		}
+		@include responsivemin($iPad_iPadMini-Land-Desktop, $height){
+			// font-size: 2.8rem;
+		}
+	}
+}
+
+.events-stuff {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-content:  space-between;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+	.event-img-holder {
+		width: 100%;
+		display: inline-block;
+		height: auto;
+
+		@include responsivemin($iPhone-6-8PLUS-Land, $height){
+			width: 48.5%;
+		}
+	}
+	.margin-bottom-class {
+		margin-bottom: 2rem;
+
+		@include responsivemin($iPhone-6-8PLUS-Land, $height){
+			margin-bottom: 0rem;
+		}
+	}
+	img {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+// this is for the jump hyperlink to adjust for the sticky nav bar that is 4rem tall
+.gallery-section::before { 
+	display: block; 
+	content: " "; 
+	margin-top: -4.4rem;
+	height: 4.4rem; 
+	visibility: hidden; 
+	pointer-events: none;
+}
+
+.gallery-section {
+	text-align: center;
+	width: 100%;
+	display: block;
+	
+	.gallery-content {
+		width: 100%;
+		display: block;
+		// background: #222;
+		padding: 4rem 2rem 2rem;
+
+		@include responsivemin($iPhone-6-8-Port, $height){
+			padding: 4rem 4rem 0;
+		}
+	
+		@include responsivemin($laptopTouch_1280, $height){
+			padding: 6rem 6rem 0;
+		}
+		@include responsivemin($Wide-Desktop, $height){
+			padding: 10rem 8rem 0;
+		}
+		@include responsivemin($ExtraLarge-Desktop, $height){
+			padding: 12rem 12rem 0;
+		}
+		.video-responsive{
+			overflow:hidden;
+			position:relative;
+			height: auto;
+		}
+		.video-responsive video {
+			height: auto;
+			width:100%;
+			display: block;
+		}
+		.video-responsive video source {
+			width: 100%;
+			height: auto;
+		}
+		.video-wrapper1, .video-wrapper2 {
+			position: relative;
+			text-align: center;
+			max-width: 100%;
+			background-color: #000;
+			overflow: hidden;
+			height: 100%;
+		}
+
+		.video-responsive, .video-wrapper1{
+			margin-bottom: 2rem;
+
+			@include responsivemin($iPhone-6-8-Port, $height){
+				margin-bottom: 4rem;
+			}
+			@include responsivemin($laptopTouch_1280, $height){
+				margin-bottom: 6rem;
+			}
+			@include responsivemin($Wide-Desktop, $height){
+				margin-bottom: 8rem;
+			}
+			@include responsivemin($ExtraLarge-Desktop, $height){
+				margin-bottom: 12rem;
+
+			}
+		}
+
+		.video-wrapper2 {
+			height: 100%;
+			position: relative;
+			text-align: center;
+			width: 100%;
+			display: block;
+		}
+
+		h2 {
+			color: #fff;
+			font-size: 1.4rem;
+			line-height: 1.4;
+
+			@include responsivemin($iPhone-6-8-Port, $height){
+				font-size: 1.6rem;
+				line-height: 1.5;
+			}
+			@include responsivemin($Nexus7-Port, $height){
+				font-size: 1.8rem;
+				line-height: 2;
+			}
+			@include responsivemin($iPad_iPadMini-Port, $height){
+				font-size: 2rem;
+				line-height: 2.5;
+			}
+			@include responsivemin($laptopTouch_1280, $height){
+				font-size: 2.2rem;
+				line-height: 3.2;
+			}
+			@include responsivemin($Wide-Desktop, $height){
+				font-size: 2.4rem;
+				line-height: 3.4;
+			}
+		}
+
+		.photo-gallery-wrapper {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			align-content:  space-between;
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+
+		.gallery-img {
+			display: inline-block;
+			color: white;
+			text-align: center;
+			overflow: hidden;
+			align-items: center;
+			width: 100%;
+			height: auto;
+			margin-bottom: 2rem;
+
+			@include responsivemin($iPhone-6-8-Port, $height){
+				margin-bottom: 4rem;
+			}
+			@include responsivemin($Nexus7-Port, $height){
+				width: 170px;
+				height: 170px;
+			}
+			@include responsivemin($iPhone-6-8PLUS-Land, $height){
+				width: 190px;
+				height: 190px;
+			}
+			@include responsivemin($iPad_iPadMini-Port, $height){
+				width: 200px;
+				height: 200px;
+			}
+			@include responsivemin($KindleFirePortrait800, $height){
+				width: 210px;
+				height: 210px;
+			}
+			@include responsivemin($Nexus7_land_960w, $height){
+				width: 265px;
+				height: 265px;
+			}
+			@include responsivemin($iPad_iPadMini-Land-Desktop, $height){ 
+				width: 290px;
+				height: 290px;
+			}
+			@include responsivemin($laptopTouch_1280, $height){
+				width: 345px;
+				height: 345px;
+				margin-bottom:6rem;
+			}
+			@include responsivemin($Wide-Desktop, $height){
+				width: 370px;
+				height: 370px;
+				margin-bottom: 8rem;
+			}
+			@include responsivemin($ExtraLarge-Desktop, $height){
+				width: 510px;
+				height: 510px;
+				margin-bottom: 12rem;
+			}
+
+			img {
+				height: 100%;
+				width: 100%;
+			}
+		}
+	}
+}
+
+// this is for the jump hyperlink to adjust for the sticky nav bar that is 4rem tall
+.about-section::before { 
+	display: block; 
+	content: " "; 
+	margin-top: -4.4rem;
+	height: 4.4rem; 
+	visibility: hidden; 
+	pointer-events: none;
+}
+
+.about-section {
+	position: relative;
+
+	.section-content.about-content-image { 
+		position: relative;
+		display: block;
+		height: 90rem;
+		width: 100%;
+		background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), 
+						url("..//cumber_images/cumberBlueJacket-bio-final.jpg");
+		background-repeat:no-repeat;
+		background-size: cover;
+		padding: 0;
+
+		@include responsivemin($Nexus7_land_960w, $height){
+			background-image:none;
+			background-position-x: right;
+			background-position-y: top;
+			vertical-align: top;
+		}
+		@include responsivemin($Wide-Desktop, $height){
+			height: 118rem;
+		}
+		@include responsivemin($ExtraLarge-Desktop, $height){
+			height: 120rem;
+
+		}
+	}
+
+	.about-bio-text {
+		position: absolute;
+		bottom: 0rem;
+		padding: 3rem 2rem;
+
+		@include responsivemin($iPad_iPadMini-Port, $height){
+			bottom: 0rem;
+			padding: 4rem;
+		}
+		@include responsivemin($Nexus7_land_960w, $height){
+			position: relative;
+			background-image:none;
+			background: #000;
+			width: 50%;
+			height: 100%;
+			display: inline-block;
+			top: 0rem;
+			bottom: initial;
+			z-index: 2;
+		}
+		@include responsivemin($iPad_iPadMini-Land-Desktop, $height){
+			padding: 5rem;
+		}
+		@include responsivemin($Wide-Desktop, $height){
+			padding: 5rem;
+		}
+		@include responsivemin($ExtraLarge-Desktop, $height){
+			padding: 11rem 9rem;
+		}
+
+		p {
+			text-indent: 2rem;
+			color: #ffffff;
+			font-weight: 400;
+			font-size: 1.4rem;
+			padding-bottom: 0.5rem;
+	
+			@include responsivemin($iPhone-6-8-Port, $height){
+				font-size: 1.5rem;
+			}
+			@include responsivemin($iPad_iPadMini-Port, $height){
+				font-size: 1.6rem;
+			}
+			@include responsivemin($laptopTouch_1280, $height){
+				font-size: 1.8rem;
+			}
+			@include responsivemin($Wide-Desktop, $height){
+				font-size: 2.0rem;
+				padding-bottom: 1.2rem;
+			}
+			@include responsivemin($ExtraLarge-Desktop, $height){
+				font-size: 2.2rem;
+			}
+		}
+	}
+	
+	.bio-image-wide {
+		display: none;
+
+		@include responsivemin($Nexus7_land_960w, $height){
+			display: inline-block;
+			width: 50%;
+			background-image: linear-gradient(to left, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1)), url("..//cumber_images/cumberBlueJacket-bio-final.jpg");
+			background-position-x: 0;
+			background-repeat: no-repeat;
+			background-size: cover;
+			position: absolute;
+			right: 0;
+			top: 0rem;
+			height: 100%;
+		}
+	}
+}
+
+// this is for the jump hyperlink to adjust for the sticky nav bar that is 4rem tall
+.contact-section::before { 
+	display: block; 
+	content: " "; 
+	margin-top: -4.4rem;
+	height: 4.4rem; 
+	visibility: hidden; 
+	pointer-events: none;
+}
+
+.contact-section {
+	text-align: center;
+	
+	.section-content {
+		// background: #000;
+	}
+
+	.social-media {
+		width: 90%;
+		margin: 0 auto;
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+
+		@include responsivemin($iPad_iPadMini-Port, $height){
+			width: 80%;
+		}
+		@include responsivemin($laptopTouch_1280, $height){
+			width: 40%;
+		}
+
+	}
+	.each-icon {
+		display:inline-block;
+		vertical-align: top;
+		padding: 2.0rem 0;
+	
+		i {
+			color:#FFFFFF;
+			font-size: 4rem;
+
+			@include responsivemin($iPad_iPadMini-Port, $height){
+				font-size: 5rem;
+			}
+			
+			&:hover {
+				color: rgba(0,244,255,0.7)!important;
+			}
+			&:focus, &:active {
+				color: #00aab2;
+			}
+		}
+	}
+}
+
+footer {
+	display: table;
+	width: 100%;
+	text-align: center;
+	padding: 2rem 0;
+
+	@include responsivemin($iPad_iPadMini-Port, $height){
+		padding: 3rem 0 4rem;
+	}
+
+	img {
+		width: 70%;
+		margin: 0 auto;
+		padding: 2.0rem 0 0rem;
+
+		@include responsivemin($GalaxySIII, $height){
+			width: 80%;
+		}
+		@include responsivemin($iPhone-4-Land, $height){
+			width: 40%;
+		}
+		@include responsivemin($iPad_iPadMini-Port, $height){
+			width: 60%;
+		}
+		@include responsivemin($iPad_iPadMini-Land-Desktop, $height) {
+			width:50%;
+		}
+		@include responsivemin($laptopTouch_1280, $height) {
+			width: 35%;
+		}
+		@include responsivemin($ExtraLarge-Desktop, $height){
+			width: 30%;
+		}
+	}
+
+	p, a {
+		font-size: 1.2rem;
+		color: #FFF;
+
+		@include responsivemin($GalaxySIII, $height){
+			font-size: 1.3rem;
+		}
+		@include responsivemin($KindleFirePortrait800, $height) {
+			font-size: 1.3rem;
+		}	
+		@include responsivemin($iPad_iPadMini-Port, $height){
+			font-size: 1.8rem;
+		}
+	}
+	a {
+		color: rgba(0,244,255,0.7) !important;
+		font-weight: bold;
+		cursor: pointer;
+	}
+	a:hover {
+		color: #00818e !important;
+	}
+
+	.borneid {
+		font-size: 1.3rem;
+		font-weight: regular;
+
+		@include responsivemin($GalaxySIII, $height){
+			font-size: 1.5rem;
+		}
+		@include responsivemin($KindleFirePortrait800, $height) {
+			font-size: 1.8rem;
+		}	
+		@include responsivemin($iPad_iPadMini-Port, $height){
+			font-size: 2rem;
+		}
+	}
+	.borneid a {
+		color: rgba(0,244,255,0.7) !important;
+		font-size: 1.3rem;
+
+		@include responsivemin($GalaxySIII, $height){
+			font-size: 1.5rem;
+		}
+		@include responsivemin($KindleFirePortrait800, $height) {
+			font-size: 1.8rem;
+		}	
+		@include responsivemin($iPad_iPadMini-Port, $height){
+			font-size: 2rem;
+		}
+	}
+	.borneid a:hover {
+		color: #00818e !important;
+	}
+
+	.email-height {
+		display: block;
+		margin-bottom: 2rem;
+	}
+	.email-height a {
+		font-size: 1.6rem;
+
+		@include responsivemin($KindleFirePortrait800, $height) {
+			font-size: 2rem;
+		}	
+		@include responsivemin($iPad_iPadMini-Port, $height){
+			font-size: 2.2rem;
+		}
+	}
+	h4 {
+		color: #FFF;
+		font-size: 1.6rem;
+		font-weight: bold;
+		margin-top: 2rem;
+		
+		@include responsivemin($KindleFirePortrait800, $height) {
+			font-size: 2rem;
+		}	
+		@include responsivemin($iPad_iPadMini-Port, $height){
+			font-size: 2.2rem;
+		}
+	}
+}
