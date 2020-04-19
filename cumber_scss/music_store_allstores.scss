@@ -1,0 +1,33 @@
+//importing media query responsive min
+@import "cumber-masterstyle";
+
+//importing base styles
+@import "cumber_base_styles";
+
+// here is all the separate song pages css:
+.generic-store {
+    background-image: url("..//cumber_musicStoreBlurredBkgrds/BREAKTHROUGH_2400x2400blurred.jpg");
+}
+
+.music_store_wrapper {
+    h1, h2, h3 {
+        color: #fff;
+    }
+    h1 {
+        font-weight: 700;
+        font-size: 2.4rem;
+        padding-bottom: 1rem;
+    }
+  
+    h2, h3 {
+        margin: 0.5rem 0 !important;
+    }
+    h2 {
+        font-weight: 100;
+        font-size: 3rem;
+    }
+    h3 {
+        font-size: 2rem;
+        font-weight: 100;
+    }
+}
