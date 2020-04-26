@@ -164,8 +164,14 @@ body {
         padding: 0 1rem;
     }
 
-    .store-logo {
+    .audiomack {
+        padding-top: 1rem;
+    }
+
+    .store_logo.audiomack-logo {
         height: 100%;
+        width: 130px;
+        // border: 1px solid red;
     }
     .button-wrapper {
         width: 50%;
@@ -173,7 +179,7 @@ body {
         display: inline-block;
         vertical-align: middle;
     }
-    
+  
     button {
         width: 12rem;
         height: 4rem;
