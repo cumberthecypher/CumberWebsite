@@ -553,7 +553,6 @@
 	.gallery-content {
 		width: 100%;
 		display: block;
-		// background: #222;
 		padding: 4rem 2rem 2rem;
 
 		@include responsivemin($iPhone-6-8-Port, $height){
@@ -569,53 +568,56 @@
 		@include responsivemin($ExtraLarge-Desktop, $height){
 			padding: 12rem 12rem 0;
 		}
-		.video-responsive{
-			overflow:hidden;
-			position:relative;
-			height: auto;
-		}
-		.video-responsive video {
-			height: auto;
-			width:100%;
-			display: block;
-		}
-		.video-responsive video source {
-			width: 100%;
-			height: auto;
-		}
+
 		.video-wrapper1, .video-wrapper2 {
-			position: relative;
 			text-align: center;
-			max-width: 100%;
-			background-color: #000;
-			overflow: hidden;
-			height: 100%;
 		}
 
-		.video-responsive, .video-wrapper1{
-			margin-bottom: 2rem;
+		.new-youtube-wrapper {
+			display: block;
+		}
+
+		.video-wrapper1, .video-wrapper2 {
+			display: block;
+			margin: 0 0rem 2rem 0rem;
 
 			@include responsivemin($iPhone-6-8-Port, $height){
-				margin-bottom: 4rem;
+				margin: 0 0rem 4rem 0rem;
+			}
+			@include responsivemin($Nexus7-Port, $height){
+			 
 			}
 			@include responsivemin($laptopTouch_1280, $height){
-				margin-bottom: 6rem;
+				margin: 0 0rem 6rem 0rem;
 			}
 			@include responsivemin($Wide-Desktop, $height){
-				margin-bottom: 8rem;
+				margin: 0 0rem 8rem 0rem;
 			}
 			@include responsivemin($ExtraLarge-Desktop, $height){
-				margin-bottom: 12rem;
-
+				margin: 0 0rem 12rem 0rem;
 			}
 		}
 
-		.video-wrapper2 {
-			height: 100%;
-			position: relative;
-			text-align: center;
+		.video-wrapper1 a, .video-wrapper2 a {
 			width: 100%;
-			display: block;
+			height: calc((9/16) * 100vw);
+			min-height: 360px;
+			max-height: calc(100vh - 169px);
+
+			@include responsivemin($Nexus7-Port, $height){
+				min-height: 480px;
+		   }
+		}
+
+		iframe {
+			width: 100%;
+			height: calc((9/16) * 100vw);
+			min-height: 360px;
+			max-height: calc(100vh - 169px);
+
+			@include responsivemin($Nexus7-Port, $height){
+				 min-height: 480px;
+			}
 		}
 
 		h2 {
