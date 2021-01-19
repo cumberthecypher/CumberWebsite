@@ -13,6 +13,7 @@ $yellow: #ffff00;
 @import "cumber-masterstyle";
 
 $height: 0.00em;
+$Sm320width: 20.0em; //320px
 $GalaxySIII: 22.50em; //360px
 $iPhone-6-8-Port: 23.000em;  //23.438em 375px
 $iPhone-6-8-PlusPort: 25.750em;  //414px really 412 = 25.750en
@@ -312,7 +313,8 @@ color:rgba(0,0,0,.1);
 }
 // KATHY ADDED THESE IMAGES TO MEDIA PLAYER
 .plyr--audio .plyr__controls {
-    color: #00f4ff !important;
+    // color: #00f4ff !important;
+    color: rgb(11,184,192) !important;
 
     &:hover {
         color: #00f4ff !important;
@@ -320,7 +322,7 @@ color:rgba(0,0,0,.1);
 }
 
 .plyr--full-ui input[type=range] {
-    color: #00f4ff !important;
+    color: rgb(11,184,192) !important;
 }
 #plList {
     width: 80%;
@@ -505,9 +507,6 @@ color:rgba(0,0,0,.1);
     .item-info {
         width: calc(100% - 60px);
         text-align: left;
-        // display: flex;
-        // flex-direction: row;
-        // flex-wrap: nowrap;
         display: table;
         height: 60px;
 
@@ -537,10 +536,13 @@ color:rgba(0,0,0,.1);
             display: table-cell;
             vertical-align: middle;
             font-family: 'Open Sans Condensed', sans-serif;
-            font-size: 1.7rem;
+            font-size: 1.4rem;
             font-weight: 600;
             height: 100%;
 
+            @include responsivemin($Sm320width, $height){
+                font-size: 1.7rem;
+            }
             @include responsivemin($iPhone-6-8-Port, $height){
                 font-size: 1.8rem;
             }
@@ -578,7 +580,6 @@ color:rgba(0,0,0,.1);
 
         .plTitle {
             order: 2;
-            // flex-grow: 2;
         }
         .plLength {
             display: none;
@@ -594,7 +595,11 @@ color:rgba(0,0,0,.1);
 }
 
 .plSel .plItem .item-info {
-   background-color:rgba(0, 244, 255, 0.7);
+//    background-color:rgba(0, 244, 255, 0.7);
+//    background-color: rgba(11, 184, 192, 0.7);
+   background: #00515c;
+//    background-color: rgba(0, 183, 165, 0.7);
+//    background-color: #ffb100;
 
     cursor:default !important;
     font-weight: 600;
@@ -606,8 +611,8 @@ color:rgba(0,0,0,.1);
 #tracks a:hover,
 #tracks a:active {
     color: rgba(0,244,255,0.5)!important;
+    
 }
 
 /* Media Queries
 ================================================== */
-
