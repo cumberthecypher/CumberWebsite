@@ -4,6 +4,9 @@
 //importing base styles
 @import "cumber_base_styles";
 
+//importing carouselHeader
+@import "carouselHeader";
+
 .main_wrapper { 
 	display: block;
 	background-color: #333;
@@ -23,7 +26,7 @@
 	position: -webkit-sticky;
 	position: sticky; //KEEP THIS STICKY TOP NAV
 	top: 0;
-	background: rgba(0,0,0,0.8);
+	background: #000;
 	z-index: 99;
 	height: 4.4rem;
 
@@ -82,22 +85,24 @@
 		//end of TOP NAV SECTION
 }
 
+
+
+// THIS IS THE YELLOW BAR WITH ICONS
 .albumdrop-icons {
 	display: flex;
 	vertical-align: top;
-	// background: #00515c;
-	// background: #ffec0e;
-
 	// background: #ffb100;
-	background:#ffe200;
+	// background:#ffe200;
+	background-color: rgba(255,255,255,0.5);
 	padding: 1rem;
 	position: relative;
 	top: 0rem;
 	left: 0;
 	width: 100%;
-	height: 4.4rem;
+	height: 5.4rem;
 	justify-content: space-between;
 	line-height: 1.5;
+	z-index:8;
 
 	@include responsivemin($iPad_iPadMini-Port, $height){
 		height: 6.0rem;
@@ -228,7 +233,6 @@
 	height: 4.0rem;
 	text-align: center;
 	background: #00515c;
-	// z-index: 3;
 
 	@include responsivemin($iPad_iPadMini-Port, $height){
 		height: 6.0rem;
@@ -264,9 +268,12 @@
 	}
 }
 
+
+// THIS IS HIDDEN RIGHT NOW, AS I PUT IN CAROUSEL 
 .home-top-image-section-new {
 	text-align: center;
-	display: block;
+	// display: block;
+	display: none;
 	position:relative;
 	height: 100vh;
 	width: 100%;
@@ -274,7 +281,8 @@
 	// keep this in case we go back to original image;
 	// background-image: url(..//cumber_images/cumberBlueJacket-final.jpg); 
 	// background-image: url(..//cumber_images/new-website-background-BREAKTHROUGH.jpg);
-	background-image: url(..//cumber_images/new-website-background-Kayamata.jpg);
+	
+	// background-image: url(..//cumber_images/new-website-background-Kayamata.jpg);
 	background-repeat:no-repeat;
 	background-size: cover;
 	background-position-x: center;
@@ -283,11 +291,9 @@
 	margin: 0;
 	
 	@include responsivemin($iPad_iPadMini-Port, $height){
-		background-image: url(..//cumber_images/KAYAMATA-websiteHome.jpg);
+		// background-image: url(..//cumber_images/KAYAMATA-websiteHome.jpg);
 
 	}
-
-
 
 	h1 {
 		display: none;
@@ -296,10 +302,27 @@
 	.helper {
 		display: inline-block;
 		vertical-align: middle;
-		
 		height: calc(100vh-200px);
 	}
 }
+// look up, it's on DISPLAY: NONE! 
+
+
+.cumber-gold-logo {
+	background: url(..//cumber_images/Cumber-tha-Cypher-logo-gold.png);
+	background-size: contain;
+    background-position: center top;
+    width: 100%;
+    vertical-align: bottom;
+    display: inline-block;
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 0;
+	padding: 20px;
+	height: 22rem;
+	bottom: 3rem;
+}
+
 
 .breakthrough-logo {
 	background: url(..//cumber_images/breakthrough-text-for-Web-1line-b.png);
