@@ -1,5 +1,5 @@
 //importing base styles
-@import "cumberstyle";
+@import "cumberstyles-new.scss";
 
 //importing media query responsive min
 // @import "cumber-masterstyle";
@@ -161,7 +161,7 @@ $ExtraLarge-Desktop: 100em; //1600px
                     }
                    
                     a {
-                        color: rgba(0,244,255,0.7) !important;
+                        color: #BBBBBB !important;
                         font-weight: bold;
                         font-size: 1.6rem;
                         cursor: pointer;
@@ -174,7 +174,7 @@ $ExtraLarge-Desktop: 100em; //1600px
                         }
                     }
                     a:hover {
-                        color: #00818e !important;
+                        color: #E100FF !important;
                     }
 
                     h1, h2, h3 {

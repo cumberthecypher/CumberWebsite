@@ -46,23 +46,16 @@ body, html {
     display: block;
     max-width:500px;
     width:100%; 
-    padding: 4.0rem 1.0rem;
+    padding: 0rem 2.0rem 2rem;
 
-    @include responsivemin($iPhone-6-8-Port, $height){
-        padding: 4.0rem 2.0rem;
-    }
     @include responsivemin($iPad_iPadMini-Port, $height){
         max-width:80%; 
-        padding: 8rem 5rem;
     }
     @include responsivemin($Nexus7_land_960w, $height){
         max-width: 60%; 
     }
     @include responsivemin($iPad_iPadMini-Land-Desktop, $height){
         max-width: 65%; 
-    }
-    @include responsivemin($laptopTouch_1280, $height){
-        // max-width: 50%; 
     }
     @include responsivemin($ExtraLarge-Desktop, $height){
         max-width: 40%; 
@@ -173,24 +166,12 @@ display:none;
     font-weight: 600;
 }
 
-
 .quote-n-title {
     display: inline-block;
     vertical-align: bottom;
     color: #fff;
     line-height: 1;
     font-size: 4rem;
-    // font-family:"Open Sans Condensed", sans-serif;
-
-    @include responsivemin($iPhone-4-Land, $height){
-        // font-size: 2.2rem;
-    }
-    @include responsivemin($iPad_iPadMini-Land-Desktop, $height){
-        // font-size: 2.4rem;
-    }
-    @include responsivemin($ExtraLarge-Desktop, $height){
-        font-size: 4rem;
-    }
 }
 #nowPlay p {
     display:inline-block;
@@ -204,7 +185,6 @@ display:none;
     font-weight: 600;
     display:inline-block;
     font-style: italic;
-    // font-family:"Open Sans Condensed", sans-serif;
 
     @include responsivemin($iPhone-4-Land, $height){
         font-size: 1.8rem;
@@ -222,17 +202,6 @@ display:none;
     font-weight: bold;
     color: white;
     display:inline-block;
-    // font-family:"Open Sans Condensed", sans-serif;
-
-    @include responsivemin($iPhone-4-Land, $height){
-        // font-size: 2.2rem;
-    }
-    @include responsivemin($iPad_iPadMini-Land-Desktop, $height){
-        // font-size: 2.4rem;
-    }
-    @include responsivemin($ExtraLarge-Desktop, $height){
-        // font-size: 3rem;
-    }
 }
 
 #tracks a {
@@ -263,13 +232,11 @@ display:none;
     @include responsivemin($ExtraLarge-Desktop, $height){
         padding: 20px;
     }
-
-
 }
 
 #tracks a::-moz-focus-inner {
-border:0;
-padding:0;
+    border:0;
+    padding:0;
 }
 
 
@@ -313,16 +280,15 @@ color:rgba(0,0,0,.1);
 }
 // KATHY ADDED THESE IMAGES TO MEDIA PLAYER
 .plyr--audio .plyr__controls {
-    // color: #00f4ff !important;
-    color: rgb(11,184,192) !important;
+    color: #FFFFFF !important;
 
     &:hover {
-        color: #00f4ff !important;
+        color: #888888 !important;
     }
 }
 
 .plyr--full-ui input[type=range] {
-    color: rgb(11,184,192) !important;
+    color: #FFFFFF !important;
 }
 #plList {
     width: 80%;
@@ -403,7 +369,6 @@ color:rgba(0,0,0,.1);
     display: inline-block;
     width: 100%;
     font-size: 1.8rem;
-    // font-weight: 600;
 
     @include responsivemin($iPhone-6-8-PlusPort, $height){
         // font-size: 1.8rem;
@@ -573,9 +538,6 @@ color:rgba(0,0,0,.1);
             @include responsivemin($iPhone-6-8-Land, $height){
                 padding: 0 6px 0 10px;
             }
-            @include responsivemin($iPad_iPadMini-Port, $height){
-                // margin-right: 10px;
-            }
         }
 
         .plTitle {
@@ -592,15 +554,11 @@ color:rgba(0,0,0,.1);
 
 .plItem:hover .item-info {
     background-color: rgba(1,20,21, 0.5);
+    background: #555555;
 }
 
 .plSel .plItem .item-info {
-//    background-color:rgba(0, 244, 255, 0.7);
-//    background-color: rgba(11, 184, 192, 0.7);
-   background: #00515c;
-//    background-color: rgba(0, 183, 165, 0.7);
-//    background-color: #ffb100;
-
+    background-color: #949494;
     cursor:default !important;
     font-weight: 600;
 }
@@ -610,8 +568,7 @@ color:rgba(0,0,0,.1);
 }
 #tracks a:hover,
 #tracks a:active {
-    color: rgba(0,244,255,0.5)!important;
-    
+    color: #888888 !important;    
 }
 
 /* Media Queries
