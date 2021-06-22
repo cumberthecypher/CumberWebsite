@@ -24,16 +24,24 @@ jQuery(function ($) {
             // mediaPath = 'https://archive.org/download/mythium/', this is the original song path from music player template
             mediaPath = './audio/',
             extension = '',
-            tracks = [{
-                "image": "<img src='./covers-images-final/Go-Low-200x200.jpg' alt='Song cover art for Go Low' />",
+            tracks = [
+            {
+                "image": "<img src='./covers-images-final/Woza-Cumber-200x200.jpg' alt='Song cover art for Woza' />",
                 "track": 1,
+                "name": "Woza",
+                "duration": "3:19",
+                "file": "Woza-short"
+            }, 
+            {
+                "image": "<img src='./covers-images-final/Go-Low-200x200.jpg' alt='Song cover art for Go Low' />",
+                "track": 2,
                 "name": "Go Low",
                 "duration": "3:25",
                 "file": "GoLow-short"
             }, 
             {
                 "image": "<img src='./covers-images-final/KAYAMATA-single-200x200.jpg' alt='Kayamata cover art by Cumber tha cypher' />",
-                "track": 2,
+                "track": 3,
                 "name": "Kayamata",
                 "duration": "3:25",
                 "file": "Kayamata-short"
@@ -41,7 +49,7 @@ jQuery(function ($) {
             {
                 // "image": "<img src='./covers-images-final/LIFE_200x200.png' alt='Life by Cumber' />",
                 "image": "<img src='./covers-images-final/BreakthroughCover-200x200.png' alt='Breakthrough album cover for Life by Cumber tha cypher' />",
-                "track": 3,
+                "track": 4,
                 "name": "Life",
                 "duration": "3:12",
                 "file": "Life-short"
@@ -49,7 +57,7 @@ jQuery(function ($) {
             {
                 // "image": "<img src='./covers-images-final/Miracle.jpg' alt='Miracle by Cumber' />",
                 "image": "<img src='./covers-images-final/BreakthroughCover-200x200.png' alt='Breakthrough album cover for Miracle by Cumber tha cypher' />",
-                "track": 4,
+                "track": 5,
                 "name": "Miracle",
                 "duration": "3:59",
                 "file": "Miracle-short"
@@ -57,7 +65,7 @@ jQuery(function ($) {
             {
                 // "image": "<img src='./covers-images-final/Believe.jpg' alt='Believe by Cumber' />",
                 "image": "<img src='./covers-images-final/BreakthroughCover-200x200.png' alt='Breakthrough album cover for Believe by Cumber tha cypher' />",
-                "track": 5,
+                "track": 6,
                 "name": "Believe",
                 "duration": "3:26",
                 "file": "Believe-short"
@@ -65,7 +73,7 @@ jQuery(function ($) {
             {
                 // "image": "<img src='./covers-images-final/DrunkInLove.jpg' alt='Drunk in Love by Cumber' />",
                 "image": "<img src='./covers-images-final/BreakthroughCover-200x200.png' alt='Breakthrough album cover for Drunk in Love by Cumber tha cypher' />",
-                "track": 6,
+                "track": 7,
                 "name": "Drunk in Love",
                 "duration": "4:26",
                 "file": "Drunk_In_Love-short"
@@ -73,7 +81,7 @@ jQuery(function ($) {
             {
                 // "image": "<img src='./covers-images-final/FastAndFurious.jpg' alt='Fast and Furious by Cumber' />",
                 "image": "<img src='./covers-images-final/BreakthroughCover-200x200.png' alt='Breakthrough album cover for Fast & Furious by Cumber tha cypher' />",
-                "track": 7,
+                "track": 8,
                 "name": "Fast and Furious",
                 "duration": "3:40",
                 "file": "Fast_and_Furious-short"
@@ -81,7 +89,7 @@ jQuery(function ($) {
             {
                 // "image": "<img src='./covers-images-final/AiyeForieng.jpg' alt='Aiye Forieng by Cumber' />",
                 "image": "<img src='./covers-images-final/BreakthroughCover-200x200.png' alt='Breakthrough album cover for Aiye Forieng by Cumber tha cypher' />",
-                "track": 8,
+                "track": 9,
                 "name": "Aiye Forieng",
                 "duration": "3:06",
                 "file": "Aiye_Forieng-short"
@@ -89,7 +97,7 @@ jQuery(function ($) {
             {
                 // "image": "<img src='./covers-images-final/BadmanThing.jpg' alt='Bad Man Thing by Cumber' />",
                 "image": "<img src='./covers-images-final/BreakthroughCover-200x200.png' alt='Breakthrough album cover for Bad Man Thing by Cumber tha cypher' />",
-                "track": 9,
+                "track": 10,
                 "name": "Bad Man Thing",
                 "duration": "3:19",
                 "file": "Bad_Man_Thing-short"
@@ -97,7 +105,7 @@ jQuery(function ($) {
             {
                 // "image": "<img src='./covers-images-final/Cassava.jpg' alt='Cassava by Cumber' />",
                 "image": "<img src='./covers-images-final/BreakthroughCover-200x200.png' alt='Breakthrough album cover for Cassava by Cumber tha cypher' />",
-                "track": 10,
+                "track": 11,
                 "name": "Cassava",
                 "duration": "3:44",
                 "file": "Cassava-short"
@@ -105,7 +113,7 @@ jQuery(function ($) {
             {
                 // "image": "<img src='./covers-images-final/Bugashi.jpg' alt='Bugashi by Cumber' />",
                 "image": "<img src='./covers-images-final/BreakthroughCover-200x200.png' alt='Breakthrough album cover for Bugashi by Cumber the cypher' />",
-                "track": 11,
+                "track": 12,
                 "name": "Bugashi",
                 "duration": "3:48",
                 "file": "Bugashi-short"
@@ -113,7 +121,7 @@ jQuery(function ($) {
             {
                 // "image": "<img src='./covers-images-final/OutofControl.jpg' alt='Out of Control by Cumber' />",
                 "image": "<img src='./covers-images-final/BreakthroughCover-200x200.png' alt='Breakthrough album cover for Out of Control by Cumber tha cypher' />",
-                "track": 12,
+                "track": 13,
                 "name": "Out of Control",
                 "duration": "4:26",
                 "file": "Out_of_Control-short"
@@ -121,7 +129,7 @@ jQuery(function ($) {
             {
                 // "image": "<img src='./covers-images-final/AiyeForieng.jpg' alt='Aiye Forieng by Cumber' />",
                 "image": "<img src='./covers-images-final/BreakthroughCover-200x200.png' alt='Breakthrough album cover for Aiye Forieng by Cumber tha cypher' />",
-                "track": 13,
+                "track": 14,
                 "name": "Shuperu",
                 "duration": "3:40",
                 "file": "Shuperu-short"
@@ -129,7 +137,7 @@ jQuery(function ($) {
             {
                 // "image": "<img src='./covers-images-final/WhoDemLockOutside.jpg' alt='Who Dem Lock Outside by Cumber (feat.) JayDrillz' />",
                 "image": "<img src='./covers-images-final/BreakthroughCover-200x200.png' alt='Breakthrough album cover for Who Dem Lock Outside by Cumber tha cypher'/>",
-                "track": 14,
+                "track": 15,
                 "name": "Who Dem Lock Outside",
                 "duration": "3:36",
                 "file": "Who_Dem_Lock_Outside-short"
