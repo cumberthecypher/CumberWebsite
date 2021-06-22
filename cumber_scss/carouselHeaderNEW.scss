@@ -1,0 +1,350 @@
+//importing media query responsive min
+@import "cumber-masterstyle";
+
+//importing base styles
+@import "cumber_base_styles";
+
+$height: 0.00em;
+$Sm320width: 20.0em; //320px
+$GalaxySIII: 22.50em; //360px
+$iPhone-6-8-Port: 23.000em;  //23.438em 375px
+$iPhone-6-8-PlusPort: 25.750em;  //414px really 412 = 25.750en
+$iPhone-4-Land: 28.000em;  //30em 480px
+$iPhone-5-Land: 35.500em;  //568px
+$Nexus7-Port: 37.500em; //600px
+$GalaxyNmore-Land: 40.000em;  //640px
+$iPhone-6-8-Land: 41.6875em;  //667px wide
+$iPhone-6-8PLUS-Land: 46.0em;  //736px wide
+$iPad_iPadMini-Port: 48.000em; //768px
+$KindleFirePortrait800: 50.00em; //800px 
+$iPhoneXland812: 50.75em; // 812px iPhoneX landscape
+$Nexus7_land_960w: 60.00em; //960px wide
+$iPad_iPadMini-Land-Desktop: 64.000em; //1024px
+$laptopTouch_1280: 80.000em; //(1280px x 800)- 80em wide
+$Wide-Desktop: 90em; //1440px
+$ExtraLarge-Desktop: 100em; //1600px
+$iPadProPortrait: 85.375em; //1024 x 1366px wide
+// @include responsivemin($iPad_iPadMini-Port, $height){
+//     font-size: 2.4rem;
+// }
+// @include responsivemin($iPad_iPadMini-Land-Desktop, $height){
+//     font-size: 2.8rem;
+// }
+
+.carousel {
+    position: relative;
+    height: 100vh;
+    filter: drop-shadow(0 0 10px #0003);
+    perspective: 100px;
+}
+    
+.carousel {
+
+    @keyframes tonext {
+        75% {
+            left: 0;
+        }
+        95% {
+            left: 100%;
+        }
+        98% {
+            left: 100%;
+        }
+        99% {
+            left: 0;
+        }
+    }
+
+    @keyframes tostart {
+        75% {
+            left: 0;
+        }
+        95% {
+            left: -300%;
+        }
+        98% {
+            left: -300%;
+        }
+        99% {
+            left: 0;
+        }
+    }
+
+    @keyframes snap {
+    96% {
+        scroll-snap-align: center;
+    }
+    97% {
+        scroll-snap-align: none;
+    }
+    99% {
+        scroll-snap-align: none;
+    }
+    100% {
+        scroll-snap-align: center;
+    }
+    }
+
+    * {
+        box-sizing: border-box;
+        scrollbar-color: transparent transparent; /* thumb and track color */
+        scrollbar-width: 0px;
+    }
+
+    *::-webkit-scrollbar {
+        width: 0;
+    }
+
+    *::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    *::-webkit-scrollbar-thumb {
+        background: transparent;
+        border: none;
+    }
+
+    * {
+    -ms-overflow-style: none;
+    }
+
+    ol, li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .carousel__viewport {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        overflow-x: hidden;
+        counter-reset: item;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+    }
+
+    .carousel__slide {
+        position: relative;
+        flex: 0 0 100%;
+        width: 100%;
+        counter-increment: item;
+    }
+
+    #carousel__slide1, #carousel__slide2, #carousel__slide3, #carousel__slide4 {
+        background-repeat:no-repeat;
+        background-size: cover;
+        background-position-x: center;
+        background-position-y: top;
+        padding: 0;
+        margin: 0;
+    }
+
+    #carousel__slide1 {
+        background-image: url(..//cumber_images/WOZA-carousel.jpg);
+    }
+
+    #carousel__slide2 {
+        background-image: url(..//cumber_images/GOLOW-CAROUSEL-new.jpg);
+    }
+
+    #carousel__slide3 {
+        background-image: url(..//cumber_images/new-website-background-BREAKTHROUGH.jpg);
+    }
+
+    #carousel__slide4 {
+        background-image: url(..//cumber_images/cumberBlueJacket-final.jpg); 
+    }
+
+    // #carousel__slide2 {
+	//     background-image: url(..//cumber_images/KAYAMATA-FINAL.jpg);
+    //     background-repeat:no-repeat;
+    //     background-size: cover;
+    //     background-position-x: center;
+    //     background-position-y: top;
+    //     padding: 0;
+    //     margin: 0;
+
+    //     @include responsivemin($laptopTouch_1280, $height){
+    //         background-position-y: -18rem;
+    //     }
+    //     @include responsivemin($Wide-Desktop, $height){
+    //         background-position-y: -23rem;
+    //     }
+    //     @include responsivemin($ExtraLarge-Desktop, $height){
+    //         background-position-y: -37rem;
+    //     }
+    // }
+
+    .carousel__slide:before {
+        content: counter(item);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate3d(-50%,-40%,70px);
+            color: #fff;
+            font-size: 2em;
+    }
+
+    .carousel__snapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        scroll-snap-align: center;
+    }
+
+    @media (hover: hover) {
+        .carousel__snapper {
+            animation-name: tonext, snap;
+            animation-timing-function: ease;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+
+        .carousel__slide:last-child .carousel__snapper {
+            animation-name: tostart, snap;
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .carousel__snapper {
+            animation-name: none;
+        }
+    }
+
+    .carousel:hover .carousel__snapper, 
+    .carousel:focus-within .carousel__snapper {
+        animation-name: none;
+    }
+
+    .carousel__navigation {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        text-align: center;
+        padding: 0 0 20px 0;
+    }
+
+    .carousel__navigation-list, 
+    .carousel__navigation-item {
+        display: inline-block;
+    }
+
+// these are the carousel dots
+    .carousel__navigation-button {
+        display: inline-block;
+        width: 1.5rem;
+        height: 1.5rem;
+        background-color: #FFF;
+        background-clip: content-box;
+        border: 0.25rem solid transparent;
+        border-radius: 50%;
+        font-size: 0;
+        transition: transform 0.1s;
+    }
+}
+// end this chunk here //
+
+
+// ARE THESE THE CIRCLE ARROWS?
+.carousel::before, 
+.carousel::after, 
+.carousel__prev, 
+.carousel__next {
+    position: absolute;
+    top: 0;
+    margin-top: 80%;
+    width: 4rem;
+    height: 4rem;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    font-size: 0;
+    outline: 0;
+   
+    @include responsivemin($GalaxySIII, $height){
+        margin-top: 100%;
+    }
+
+    // @include responsivemin($Nexus7-Port, $height){
+    @include responsivemin($iPad_iPadMini-Port, $height){
+        margin-top: 70%;
+    }
+    // 540 x 720px = Surface DUO
+	@media (min-width: 540px) and (min-height: 720px) {
+        margin-top: 65%;
+    }
+    // 375 x 812px = iPhoneX
+    @media (min-width: 375px) and (min-height: 812px) {
+        margin-top: 105%;
+    }
+    // 600 x 960px = NEXUS 7
+	@media (min-width: 600px) and (min-height: 960px) {
+        margin-top: 82%;
+    }
+    @include responsivemin( $iPad_iPadMini-Port, $height){
+        margin-top: 70%;
+    }
+    @include responsivemin($KindleFirePortrait800, $height){
+        margin-top: 85%;
+    }
+    // 1024 x 1366px = iPad Pro PORTRAIT
+	@media (min-width: 1024px) and (min-height: $iPadProPortrait) {
+        margin-top: 70%;
+    }
+    @include responsivemin($laptopTouch_1280, $height){
+        margin-top: 35%;
+    }
+	@include responsivemin($Wide-Desktop, $height){
+        margin-top: 33%;
+    }
+    @include responsivemin($ExtraLarge-Desktop, $height){
+        // margin-top: 38%;
+        margin-top: 30%;
+    }
+}
+
+.carousel::before, 
+.carousel__prev {
+    left: -1rem;
+}
+
+.carousel::after, 
+.carousel__next {
+    right: -1rem;
+}
+
+.carousel::before, 
+ .carousel::after {
+    content: '';
+        z-index: 1;
+        background-color: #000;
+        background-size: 1.5rem 1.5rem;
+        background-repeat: no-repeat;
+        background-position: center center;
+        color: #fff;
+        font-size: 2.5rem;
+        line-height: 4rem;
+        text-align: center;
+        pointer-events: none;
+
+    }
+
+.carousel::before {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,50 80,100 80,0' fill='%23fff'/%3E%3C/svg%3E");
+}
+
+.carousel::after {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
+}
+
+// these are the numbers of the slides that display center of image - made them display none 
+.carousel .carousel__slide:before {
+    // color:lime;
+    display:none;
+}

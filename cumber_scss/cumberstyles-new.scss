@@ -5,8 +5,11 @@
 @import "cumber_base_styles";
 
 //importing carouselHeader
-@import "carouselHeader";
+@import "carouselHeaderNEW";
 
+* {
+	box-sizing: border-box;
+}
 .main_wrapper { 
 	display: block;
 	background-color: #333;
@@ -28,7 +31,7 @@
 	top: 0;
 	background: #000;
 	z-index: 99;
-	height: 4.4rem;
+	height: 4.5rem;
 
 		@include responsivemin($iPad_iPadMini-Port, $height){
 			height: 6.0rem;
@@ -41,10 +44,23 @@
 			display: flex;
 		}
 
+		@media only screen 
+			and (min-width: 1024px) 
+			and (max-height: 1366px) 
+			and (-webkit-min-device-pixel-ratio: 1.5) {
+				background-color: #555;
+		}
+
+		@include responsivemin($laptopTouch_1280, $height){
+			background-color: #555;
+		}
+
+
 		.nav-sec {
-			text-align:center;
-			display:block;
+			text-align: center;
+			display: block;
 			width: 100%;
+			height: 100%;
 		
 			ul {
 				display: -webkit-box;
@@ -56,27 +72,25 @@
 			}
 
 			a {
-				display: table;
-				line-height: 2.4;
+				padding: 1rem;
 			}
 		
 			a li {
 				color: $white;
-				display:table-cell;
+				display: table-cell;
+				font-weight: 600;
 				vertical-align: middle;
 				font-size: 1.6rem;
 				cursor:pointer;
 		
 				&:hover {
-					color: rgba(0,244,255,0.7)!important;
-					// color: rgb(11,184,192);
-					// color: #0bb8c0;
+					color: #E100FF !important;
 				}
 			
 				@include responsivemin($GalaxySIII, $height){
-					font-size: 1.8rem;
 					margin: 0px 5px;
 				}
+
 				@include responsivemin($iPad_iPadMini-Port, $height){
 					font-size: 2.5rem;
 				}
@@ -89,133 +103,101 @@
 
 // THIS IS THE YELLOW BAR WITH ICONS
 .albumdrop-icons {
-	display: flex;
-	vertical-align: top;
-	// background: #ffb100;
-	// background:#ffe200;
+	height: 4.5rem;
+	display: block;
 	background-color: rgba(255,255,255,0.5);
-	padding: 1rem;
-	position: relative;
-	top: 0rem;
-	left: 0;
 	width: 100%;
-	height: 5.4rem;
-	justify-content: space-between;
-	line-height: 1.5;
 	z-index:8;
 
 	@include responsivemin($iPad_iPadMini-Port, $height){
 		height: 6.0rem;
 	}
 
-	h2 {
-		color: #222;
-		// color: #FFFFFF;
-		font-weight: 700;
-		font-style: italic;
-		display: inline-block;
-		vertical-align: top;
-		margin-right: 2rem;
-		font-size: 1.6rem;
-		line-height: 1.4;
+	@media only screen 
+		and (min-width: 1024px) 
+		and (max-height: 1366px) 
+		and (-webkit-min-device-pixel-ratio: 1.5) {
+			background-color: #555;
+	}
 
-		@include responsivemin($GalaxySIII, $height){
-			font-size: 2rem;
-			line-height: 1.2;
-			margin-right: 1rem;
-			letter-spacing: -0.5px;
-		}
-		@include responsivemin($iPad_iPadMini-Port, $height){
-			font-size: 2.6rem;
-			line-height: 1.6;
-			margin-left: 3rem;
-		}
+	@include responsivemin($laptopTouch_1280, $height){
+		background-color: #555;
+	}
+
+	// h2 {
+	// 	color: #222;
+	// 	// color: #FFFFFF;
+	// 	font-weight: 700;
+	// 	font-style: italic;
+	// 	display: inline-block;
+	// 	vertical-align: top;
+	// 	margin-right: 2rem;
+	// 	font-size: 1.6rem;
+	// 	line-height: 1.4;
+
+	// 	@include responsivemin($GalaxySIII, $height){
+	// 		font-size: 2rem;
+	// 		line-height: 1.2;
+	// 		margin-right: 1rem;
+	// 		letter-spacing: -0.5px;
+	// 	}
+	// 	@include responsivemin($iPad_iPadMini-Port, $height){
+	// 		font-size: 2.6rem;
+	// 		line-height: 1.6;
+	// 		margin-left: 3rem;
+	// 	}
+	// }
+
+	.store-helper {
+		display: inline-block;
+		vertical-align: middle;
+		height: 100%;
+		width: 0px;
+		background: pink;
+	}
+	.store-icon-wrapper {
+		display: inline-block;
+		vertical-align: middle;
+		width: 99%;
 	}
 
 	.store-icons {
-		display: inline-block;
-		vertical-align: top;
-
-		@include responsivemin($iPad_iPadMini-Port, $height){
-			margin-right: 2rem;
-		}
-		
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+	
 		a {
 			cursor: pointer;
-			margin: 0 .5rem 0 0 !important;
+			margin: 0 !important;
 			display: inline-block;
 			vertical-align: top;
-
-			@include responsivemin($iPhone-6-8-Port, $height){
-				margin: 0 .8rem 0 0 !important;
-			}
-			@include responsivemin($iPhone-6-8-PlusPort, $height){
-				margin: 0 1rem 0 0 !important;
-			}
-		}
-
-		a:hover i {
-			color: #27a2fc;
-			color: red;
-		}
-
-		a:active {
-			color: #2737fc;
-			color: lime;
-		}
-
-		i {
-			color: #333;
-			font-size: 2rem;
-
-			@include responsivemin($GalaxySIII, $height){
-				font-size: 2.5rem;
-			}
-			@include responsivemin($iPad_iPadMini-Port, $height){
-				font-size: 2.6rem;
-				line-height: 1.6;
-			}
 		}
 
 		.appLogo {
 			background-repeat:no-repeat;
 			background-position: center;
 			background-size: contain;
-			width: 2.4rem;
-			height: 2.4rem;
-
-			@include responsivemin($GalaxySIII, $height){
-				width: 3rem;
-				height: 3rem;
-				margin-top: -0.3rem;
-			}
+			width: 3.5rem;
+			height: 3.5rem;
 
 			@include responsivemin($iPad_iPadMini-Port, $height){
-				width: 3.9rem;
-				height: 3.9rem;
-				margin-top: 0.2rem;
+				width: 5rem;
+				height: 5rem;
 			}
 		}
 
 		.iTunesApp-logo {
-			background-image:url(..//cumber_images/iTunesAppLogo.png );
+			background-image:url(..//cumber_images/iTunesAppLogo.png);
 		}
 		.iTunesApp-logo:hover {
-			background-image:url(..//cumber_images/iTunesAppLogo-hover.png );
+			background-image:url(..//cumber_images/iTunesAppLogo-hover.png);
 		}
 
-		.audiomackApp-logo {
-			background-image:url(..//cumber_images/audiomackAppLogo.png );
+		.appleMusicApp-logo {
+			background-image:url(..//cumber_images/AppleMusicAppLogo.png);
 		}
-		.audiomackApp-logo:hover {
-			background-image:url(..//cumber_images/audiomackAppLogo-hover.png );
-		}
-
-		.amazonApp-logo {
-			background-image:url(..//cumber_images/amazonAppLogo.png );
-		}
-		.amazonApp-logo:hover {
-			background-image:url(..//cumber_images/amazonAppLogo-hover.png );
+		.appleMusicApp-logo:hover {
+			background-image:url(..//cumber_images/AppleMusicAppLogo-hover.png);
 		}
 
 		.spotify-logo {
@@ -224,22 +206,82 @@
 		.spotify-logo:hover {
 			background-image:url(..//cumber_images/spotifyApp-hover.png);
 		}
+
+		.amazonApp-logo {
+			background-image:url(..//cumber_images/amazonAppLogo.png);
+		}
+		.amazonApp-logo:hover {
+			background-image:url(..//cumber_images/amazonAppLogo-hover.png);
+		}
+
+		.youTubeMusic-logo {
+			background-image:url(..//cumber_images/youTubeMusic.png);
+		}
+		.youTubeMusic-logo:hover {
+			background-image:url(..//cumber_images/youTubeMusic-hover.png);
+		}
+
+		// .youTubeApp-logo {
+		// 	background-image:url(..//cumber_images/youTubeAppLogo.png);
+		// }
+		// .youTubeApp-logo:hover {
+		// 	background-image:url(..//cumber_images/youTubeAppLogo-hover.png);
+		// }
+
+		.deezer-logo {
+			background-image:url(..//cumber_images/deezerAppLogo.png);
+
+			// @include responsivemin($iPadProPortrait, $height){
+			// 	border: 1.5px solid #f39929;
+			// 	border-radius: 10px;
+			// }
+		}
+		.deezer-logo:hover {
+			background-image:url(..//cumber_images/deezerAppLogo-hover.png);
+
+			// @include responsivemin($iPadProPortrait, $height){
+			// 	border: 1.5px solid #f39929;
+			// 	border-radius: 10px;
+			// }
+		}
+
+		// .tidal-logo {
+		// 	background-image:url(..//cumber_images/tidalAppLogo.png);
+		// }
+		// .tidal-logo:hover {
+		// 	background-image:url(..//cumber_images/tidalAppLogo-hover.png);
+		// }
+
+		.audiomackApp-logo {
+			background-image:url(..//cumber_images/audiomackAppLogo.png);
+		}
+		.audiomackApp-logo:hover {
+			background-image:url(..//cumber_images/audiomackAppLogo-hover.png);
+		}
+
+		.soundCloudApp-logo {
+			background-image:url(..//cumber_images/soundCloudAppLogo.png);
+		}
+		.soundCloudApp-logo:hover {
+			background-image:url(..//cumber_images/soundCloudAppLogo-hover.png);
+		}
 	}
 }
 
 .section-header {
     display: block;
 	width: 100%;
-	height: 4.0rem;
+	height: 4.5rem;
 	text-align: center;
-	background: #00515c;
+	// background: rgba(255, 255, 255, 0.25);
+	background: #555;
 
 	@include responsivemin($iPad_iPadMini-Port, $height){
 		height: 6.0rem;
 	}
 
 	.spacer {
-		height: 4.0rem;
+		height: 4.5rem;
 		display:inline-block;
 		vertical-align: middle;
 
@@ -254,6 +296,10 @@
 		display: inline-block;
 		vertical-align: middle;
 	}
+}
+
+.cumber-the-cypher-header {
+	height: 100%;
 }
 
 .section-content {
@@ -272,27 +318,29 @@
 // THIS IS HIDDEN RIGHT NOW, AS I PUT IN CAROUSEL 
 .home-top-image-section-new {
 	text-align: center;
-	// display: block;
-	display: none;
+	display: block;
 	position:relative;
-	height: 100vh;
+	height: calc(100vh - 9rem);
 	width: 100%;
 
 	// keep this in case we go back to original image;
 	// background-image: url(..//cumber_images/cumberBlueJacket-final.jpg); 
 	// background-image: url(..//cumber_images/new-website-background-BREAKTHROUGH.jpg);
-	
-	// background-image: url(..//cumber_images/new-website-background-Kayamata.jpg);
+	background-image: url(..//cumber_images/cumber-leathervest-BW-revised-lite.jpg);
 	background-repeat:no-repeat;
 	background-size: cover;
 	background-position-x: center;
 	background-position-y: top;
     padding: 0;
 	margin: 0;
-	
-	@include responsivemin($iPad_iPadMini-Port, $height){
-		// background-image: url(..//cumber_images/KAYAMATA-websiteHome.jpg);
 
+	@include responsivemin($iPad_iPadMini-Port, $height){
+		height: calc(100vh - 12rem);
+	}
+	
+	@include responsivemin($laptopTouch_1280, $height){
+		background-position-y: -30rem;
+		background-position-x: center;
 	}
 
 	h1 {
@@ -322,7 +370,6 @@
 	height: 22rem;
 	bottom: 3rem;
 }
-
 
 .breakthrough-logo {
 	background: url(..//cumber_images/breakthrough-text-for-Web-1line-b.png);
@@ -412,7 +459,6 @@
 	}
 }
 
-
 .music-section {
 	background-image: linear-gradient(to bottom, rgba(2, 2, 2, 0.3), rgba(0,0,0,0.7)),url(..//cumber_images/cumberBlueJacket1-rev-orig2.jpg);
     background-repeat: no-repeat;
@@ -423,7 +469,6 @@
 	.section-content.music-content {
 		width: 100%;
 		display: block;
-		// background-color: transparent;
 		padding: 0rem;
 	}
 
@@ -775,12 +820,9 @@
 				font-size: 5rem;
 			}
 			
-			&:hover {
-				// color: rgba(0,244,255,0.7)!important;
-				color: #00b8be !important;
-			}
-			&:focus, &:active {
-				color: #00aab2;
+			&:hover, &:focus, &:active  {
+				// color: #00b8be !important;
+				color: #E100FF !important;
 			}
 		}
 	}
@@ -828,24 +870,17 @@ footer {
 		@include responsivemin($GalaxySIII, $height){
 			font-size: 1.3rem;
 		}
-		@include responsivemin($KindleFirePortrait800, $height) {
-			font-size: 1.3rem;
-		}	
 		@include responsivemin($iPad_iPadMini-Port, $height){
 			font-size: 1.8rem;
 		}
 	}
 	a {
-		// color: #0094a9 !important;
-		color: #00b8be !important;
-		
+		color: #BBBBBB !important;
 		font-weight: bold;
 		cursor: pointer;
 	}
 	a:hover {
-		// color: #00818e !important;
-		// color: #00515c !important;
-		color: #007f83 !important;
+		color: #E100FF !important;
 	}
 
 	.borneid {
@@ -863,7 +898,8 @@ footer {
 		}
 	}
 	.borneid a {
-		color: rgba(0,244,255,0.7) !important;
+		// color: rgba(0,244,255,0.7) !important;
+		color: #BBBBBB !important;
 		font-size: 1.3rem;
 
 		@include responsivemin($GalaxySIII, $height){
@@ -877,7 +913,7 @@ footer {
 		}
 	}
 	.borneid a:hover {
-		color: #00818e !important;
+		color: #E100FF !important;
 	}
 
 	.email-height {

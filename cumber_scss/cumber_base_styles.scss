@@ -10,6 +10,7 @@ $blue: #282832;
 $yellow: #ffff00; 
 
 $height: 0.00em;
+$height-iPadPro: 1366px;
 $Sm320width: 20.0em; //320px
 $GalaxySIII: 22.50em; //360px
 $iPhone-6-8-Port: 23.000em;  //23.438em 375px
@@ -25,10 +26,30 @@ $KindleFirePortrait800: 50.00em; //800px
 $iPhoneXland812: 50.75em; // 812px iPhoneX landscape
 $Nexus7_land_960w: 60.00em; //960px wide
 $iPad_iPadMini-Land-Desktop: 64.000em; //1024px
+$iPadProPortrait: 85.375em; //1024 x 1366px wide
 $laptopTouch_1280: 80.000em; //(1280px x 800)- 80em wide
 $Wide-Desktop: 90em; //1440px
 $ExtraLarge-Desktop: 100em; //1600px
-$iPadProPortrait: 85.375em; //1024 x 1366px wide
+$FourK-2560px: 256rem; //2560px wide x 1146px tall(256rem)
+
+
+/* Portrait and Landscape */
+// @media only screen 
+//   and (min-width: 1024px) 
+//   and (max-height: 1366px) 
+//   and (-webkit-min-device-pixel-ratio: 1.5) {
+// 	put stuff here 
+// }
+
+
+	/* 2340x1080 pixels at 476ppi -Phone12Max */
+	// @media only screen 
+	// and (device-width: 375px) 
+	// and (device-height: 812px) 
+	// and (-webkit-device-pixel-ratio: 3) { 
+	// 	background-position-x: center;
+	// 	background-position-y: top;
+	// }
 
 @media screen and (min-width: 1400px) {
 	.container {
