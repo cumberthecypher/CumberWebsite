@@ -546,9 +546,6 @@
 			@include responsivemin($iPhone-6-8-Port, $height){
 				margin: 0 0rem 4rem 0rem;
 			}
-			@include responsivemin($Nexus7-Port, $height){
-			 
-			}
 			@include responsivemin($laptopTouch_1280, $height){
 				margin: 0 0rem 6rem 0rem;
 			}
