@@ -10,7 +10,13 @@
 * {
 	box-sizing: border-box;
 }
+
+html {
+	scroll-behavior: smooth;
+}
+
 .main_wrapper { 
+	scroll-margin-top: -10rem;
 	display: block;
 	background-color: #333;
 	font-family: 'Open Sans', sans-serif;
@@ -20,7 +26,7 @@
 	overflow-y: scroll;
 	height: 100vh;
 	position: relative;
-	  overscroll-behavior: contain;
+	overscroll-behavior: contain;
 }
 
 .header-top-nav { 
@@ -221,36 +227,12 @@
 			background-image:url(..//cumber_images/youTubeMusic-hover.png);
 		}
 
-		// .youTubeApp-logo {
-		// 	background-image:url(..//cumber_images/youTubeAppLogo.png);
-		// }
-		// .youTubeApp-logo:hover {
-		// 	background-image:url(..//cumber_images/youTubeAppLogo-hover.png);
-		// }
-
 		.deezer-logo {
 			background-image:url(..//cumber_images/deezerAppLogo.png);
-
-			// @include responsivemin($iPadProPortrait, $height){
-			// 	border: 1.5px solid #f39929;
-			// 	border-radius: 10px;
-			// }
 		}
 		.deezer-logo:hover {
 			background-image:url(..//cumber_images/deezerAppLogo-hover.png);
-
-			// @include responsivemin($iPadProPortrait, $height){
-			// 	border: 1.5px solid #f39929;
-			// 	border-radius: 10px;
-			// }
 		}
-
-		// .tidal-logo {
-		// 	background-image:url(..//cumber_images/tidalAppLogo.png);
-		// }
-		// .tidal-logo:hover {
-		// 	background-image:url(..//cumber_images/tidalAppLogo-hover.png);
-		// }
 
 		.audiomackApp-logo {
 			background-image:url(..//cumber_images/audiomackAppLogo.png);
