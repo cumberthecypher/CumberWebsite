@@ -117,6 +117,7 @@ display:none;
 #audiowrap,
 #plwrap {
     margin:0 auto;
+    text-align: center;
 }
 
 #plwrap {
@@ -151,7 +152,7 @@ display:none;
 
 #nowPlay h2 {
     color: #FFF;
-    padding: 3rem 0;
+    padding: 1rem 0rem;
 }
 
 .title-wrap {
@@ -171,7 +172,7 @@ display:none;
     vertical-align: bottom;
     color: #fff;
     line-height: 1;
-    font-size: 4rem;
+    font-size: 3rem;
 }
 #nowPlay p {
     display:inline-block;
@@ -179,12 +180,13 @@ display:none;
     line-height: 1;
 }
 
-#nowPlay p#npAction {
+p#npAction {
     color: white;
     font-size: 1.6rem;
     font-weight: 600;
     display:inline-block;
     font-style: italic;
+    text-align: center;
 
     @include responsivemin($iPhone-4-Land, $height){
         font-size: 1.8rem;
@@ -198,7 +200,7 @@ display:none;
 }
 
 #nowPlay p#npTitle {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: bold;
     color: white;
     display:inline-block;
