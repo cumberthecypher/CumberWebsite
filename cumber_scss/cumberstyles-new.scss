@@ -674,7 +674,7 @@ html {
 		display: block;
 		width: 100%;
 		background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), 
-						url("..//cumber_images/cumberBlueJacket-bio-final.jpg");
+						url("..//cumber_images/cumberBlueJacket-bio-final-BW.jpg");
 		background-repeat:no-repeat;
 		background-size: cover;
 		padding: 0;
@@ -756,7 +756,7 @@ html {
 		@include responsivemin($Nexus7_land_960w, $height){
 			display: inline-block;
 			width: 50%;
-			background-image: linear-gradient(to left, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1)), url("..//cumber_images/cumberBlueJacket-bio-final.jpg");
+			background-image: linear-gradient(to left, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1)), url("..//cumber_images/cumberBlueJacket-bio-final-BW.jpg");
 			background-position-x: 0;
 			background-repeat: no-repeat;
 			background-size: cover;
